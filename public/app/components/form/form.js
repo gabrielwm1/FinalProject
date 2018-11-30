@@ -6,7 +6,7 @@ const submit = {
 
         vm.saveTask = (newTask) => {
             console.log(newTask);
-            //MainService.postTodo(newTask);
+            MainService.postTodo(newTask);
         };
     }]
 }
