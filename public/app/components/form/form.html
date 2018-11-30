@@ -1,0 +1,17 @@
+<form ng-submit="$ctrl.saveTask(task)">
+    <p>Use the form below to add task.</p>
+    <input ng-model="task.todo" type="text">
+    <label for="">Importance:</label>
+    <select ng-model="task.importance">
+        <option value="1">Low Priority</option>
+        <option value="2">Medium Priority</option>
+        <option value="3">High Priority</option>
+    </select>
+    <input ng-model="task.daily" type="radio" id="daily" value="true" checked>
+    <label for="daily">Daily</label>
+    <input ng-model="task.weekly" type="radio" id="weekly" value="true" checked>
+    <label for="weekly">Weekly</label>
+    <input ng-model="task.todo" type="radio" id="todo" value="true" checked>
+    <label for="todo">Task</label>
+    <button class="editbtn">Update</button>
+</form>

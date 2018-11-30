@@ -23,7 +23,7 @@ function MainService($http){
         });
     };
 
-    self.post = (newTask) => {
+    self.postTodo = (newTask) => {
         return $http({
             url:"/tasks",
             method:"POST",

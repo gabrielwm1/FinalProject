@@ -9,11 +9,17 @@
         <link rel="stylesheet" href="app/css/styles.css">
     </head>
     <body>
-        {{ 1+1}}
+        <a href="#!/todolist">Todo</a>
+
+        <a href="#!/submit">Form</a>
+
+        <ng-view></ng-view>
         
-        <script src="https://code.angularjs.org/1.6.5/angular.min.js"></script>
+        <script src="https://code.angularjs.org/1.6.5/angular.js"></script>
         <script src="https://code.angularjs.org/1.6.5/angular-route.js"></script>
         <script src="app/module/module.js"></script>
         <script src="app/service/service.js"></script>
+        <script src="app/components/todolist/todolist.js"></script>
+        <script src="app/components/form/form.js"></script>
     </body>
 </html>
