@@ -1,5 +1,5 @@
 "use strict";
-function MainService($http){
+function MainService($http, $location){
     const self = this;
 
     self.getDaily = () => {
@@ -46,6 +46,14 @@ function MainService($http){
         });
     };
 
+    self.loadEdit = () => {
+        $location.path("/submit");
+      };
+
+    self.loadList = () => {
+      $location.path("/todolist");
+     };
+    
 
 }
 

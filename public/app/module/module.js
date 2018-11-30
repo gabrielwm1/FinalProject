@@ -2,9 +2,9 @@ angular
     .module("App", ["ngRoute"])
     .config(["$routeProvider", ($routeProvider) => {
         $routeProvider
-        // .when("/home", {
-        //     template: "<home></home>"
-        // })
+        .when("/home", {
+            template: "<home></home>"
+        })
         .when("/todolist", {
             template: "<todolist></todolist>"
         })
