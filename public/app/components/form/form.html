@@ -1,25 +1,19 @@
-<form ng-submit="$ctrl.saveTask($ctrl.newTask)">
+<form>
     <p>Use the form below to add task.</p>
     <input ng-model="$ctrl.newTask.task" type="text">
     <label for="">Importance:</label>
     <div>
-        <input ng-model = "$ctrl.taskImportance($ctrl.value)" type="button" value = "1">
-        <input type = "button" value = "2">
-        <input type = "button" value = "3">
+        <button ng-click="$ctrl.addImportance(1)">1</button>
+        <button ng-click="$ctrl.addImportance(2)">2</button>
+        <button ng-click="$ctrl.addImportance(3)">3</button>
 
     </div>
-    
-    <!-- <button ng-click="$ctrl.getImportance($ctrl.importance)"
-            ng-click="$ctrl.flipLow()">
-        <option value="1">Low Priority</option>
-        <option value="2">Medium Priority</option>
-        <option value="3">High Priority</option> -->
+
     </select>
-    <input ng-model="$ctrl.newTask.daily" type="radio" id="daily" value="true">
-    <label for="daily">Daily</label>
-    <input ng-model="$ctrl.newTask.weekly" type="radio" id="weekly" value="true">
-    <label for="weekly">Weekly</label>
-    <input ng-model="$ctrl.newTask.todo" type="radio" id="todo" value="true">
-    <label for="todo">Task</label>
-    <button class="editbtn">Update</button> 
+
+        <button ng-click="$ctrl.addFrequency('daily')">daily</button>
+        <button ng-click="$ctrl.addFrequency('weekly')">weekly</button>
+        <button ng-click="$ctrl.addFrequency('todo')">todo</button>
+
+    <button class="editbtn" ng-click="$ctrl.saveTask($ctrl.newTask)">Update</button> 
 </form>
