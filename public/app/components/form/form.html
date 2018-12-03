@@ -1,20 +1,21 @@
-
 <form>
-    <p>Use the form below to add task.</p>
-    <input ng-model="$ctrl.newTask.task" type="text">
-    <label for="">Importance:</label>
-    <div>
-        <button ng-click="$ctrl.addImportance(1)">1</button>
-        <button ng-click="$ctrl.addImportance(2)">2</button>
-        <button ng-click="$ctrl.addImportance(3)">3</button>
+    <h2>Add Task</h2>
+    <section class="form-contain">
+        <p class="form-label">Task:</p>
+        <input ng-model="$ctrl.newTask.task" type="text">
+        <p class="form-label">Importance:</p>
 
-    </div>
-
-    </select>
+        <div class="form-btns">
+            <button ng-click="$ctrl.addImportance(1)">1</button>
+            <button ng-click="$ctrl.addImportance(2)">2</button>
+            <button ng-click="$ctrl.addImportance(3)">3</button>
+        </div>
+        <p class="form-label">Frequency:</p>
 
         <button ng-click="$ctrl.addFrequency('daily')">daily</button>
         <button ng-click="$ctrl.addFrequency('weekly')">weekly</button>
         <button ng-click="$ctrl.addFrequency('todo')">todo</button>
 
-    <button class="editbtn" ng-click="$ctrl.saveTask($ctrl.newTask)">Update</button>
+        <button class="editbtn" ng-click="$ctrl.saveTask($ctrl.newTask)">Update</button>
+    </section>
 </form>
