@@ -6,16 +6,17 @@
         <p class="form-label">Importance:</p>
 
         <div class="form-btns">
-            <button ng-click="$ctrl.addImportance(1)">1</button>
-            <button ng-click="$ctrl.addImportance(2)">2</button>
-            <button ng-click="$ctrl.addImportance(3)">3</button>
+            <button class="low" ng-click="$ctrl.addImportance(1)">!</button>
+            <button class="medium" ng-click="$ctrl.addImportance(2)">!!</button>
+            <button class="high" ng-click="$ctrl.addImportance(3)">!!!</button>
         </div>
         <p class="form-label">Frequency:</p>
 
-        <button ng-click="$ctrl.addFrequency('daily')">daily</button>
-        <button ng-click="$ctrl.addFrequency('weekly')">weekly</button>
-        <button ng-click="$ctrl.addFrequency('todo')">todo</button>
-
-        <button class="editbtn" ng-click="$ctrl.saveTask($ctrl.newTask)">Update</button>
+        <div class="form-btns">
+            <button class="daily-btn" ng-click="$ctrl.addFrequency('daily')">Daily</button>
+            <button class="weekly-btn" ng-click="$ctrl.addFrequency('weekly')">Weekly</button>
+            <button class="todo-btn" ng-click="$ctrl.addFrequency('todo')">Todo</button>
+        </div>
+        <button class="edit-btn" ng-click="$ctrl.saveTask($ctrl.newTask)">Update</button>
     </section>
 </form>
