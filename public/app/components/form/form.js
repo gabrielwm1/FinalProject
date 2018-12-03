@@ -3,17 +3,8 @@ const submit = {
     templateUrl: "app/components/form/form.html",
     controller: ["MainService", function(MainService){
         const vm = this;
-        // vm.lowImportance = false;
-        // vm.medImportance = false;
-        // vm.highImportance = false; 
-        // vm.newTask = {};
-
+    
         vm.saveTask = (task) => {
-            // vm.newTask.task = task.task;
-            
-            console.log(task);
-
-            //console.log("test");
             MainService.postTodo(task);
         };
 
@@ -45,7 +36,6 @@ const submit = {
                 vm.newTask.todo = true;
             }
         }
-
 
         vm.medImportance = () => {
             vm.medImportance = !vm.medImportance;
