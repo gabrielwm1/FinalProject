@@ -11,5 +11,5 @@ angular
         .when("/submit", {
             template: "<submit></submit>"
         })
-        // .otherwise({redirectTo:"/home"})
+        .otherwise({redirectTo:"/home"})
     }])

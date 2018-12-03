@@ -4,8 +4,12 @@ body {
 
 .linking {
     position: fixed;
-    right: 10px;
+    left: 10px;
     top: 10px;
+}
+
+.hide {
+    display: none;
 }
 
 /* navigation styling */
@@ -71,7 +75,430 @@ body {
     min-width: auto;
     min-height: 100vh;
     background-image: url("../images/background-img.jpg");
-    background-position: center; 
-    background-repeat: no-repeat; 
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
+}
+
+.form-modal {
+    position: absolute;
+    left: 0;
+    top: 0
+}
+
+.form-overlay {
+    background-color: rgba(101, 157, 190, 0.795);
+    height: 100vh;
+    width: 100vw;
+}
+
+submit {
+    border-radius: 15px;
+    padding: 20px;
+    width: 60vw;
+    background-color: #EFF3F4;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.coin-container {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #EFF3F4;
+    height: 150px;
+    width: 150px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px 1px rgb(87, 133, 151);
+}
+
+.coin {
+    margin: 20px;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.currency {
+    font-family: 'Roboto Slab', serif;
+    color: #C1603A;
+    font-size: 30px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin-left: 10px;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.coin:hover {
+    margin: 15px;
+    cursor: pointer;
+}
+
+/* this is not working why */
+/* .coin:hover .currency {
+    font-size: 40px;
+    cursor: pointer;
+} */
+
+/* ____________ */
+
+/* DOG STYLING */
+
+/* ___________ */
+
+/* dog position */
+
+.dog {
+    width: 120px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* blocky boy */
+
+.body {
+    background: #3c3b3c;
+    border-radius: 300px 300px 0 0;
+    height: 230px;
+    border-top: 4px solid #686868;
+}
+
+/* beard area */
+
+.beard {
+    width: 40%;
+    height: 25%;
+    background: #FEFEFE;
+    margin: 0 auto;
+    border-radius: 60px;
+    border-top: 4px solid #Df8f2E;
+    position: relative;
+}
+
+/* nose */
+
+.beard:before {
+    content: '';
+    background: #000;
+    width: 20px;
+    height: 10px;
+    border-radius: 0 0 20px 20px;
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.mouth {
+    background: #1A243C;
+    width: 55%;
+    height: 25%;
+    border-radius: 0 0 30px 30px;
+    position: absolute;
+    top: 30%;
+    margin: auto;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    border-top: 3px solid #fff;
+    box-sizing: border-box;
+}
+
+.mouth .tongue {
+    width: 55%;
+    height: 200%;
+    border-radius: 5px 5px 10px 10px;
+    background: #FF6B5A;
+    margin: 0 auto;
+    position: relative;
+    top: 30%;
+    transition: 300ms;
+    animation: grow .1s infinite alternate;
+}
+
+/* spot between eyes */
+
+.eyes {
+    background: #4e4e4e;
+    width: 17%;
+    height: 12%;
+    border-radius: 20px 20px 0 0;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    top: 2%;
+    transition: .4s ease-in-out;
+}
+
+/* creates eyes */
+
+.eyes:before, .eyes:after {
+    content: '';
+    width: 15px;
+    height: 15px;
+    background: #000;
+    display: block;
+    border-radius: 50%;
+    top: 50%;
+    border: 0.5px solid #bdbdbd;
+    position: absolute;
+    transition: .15s ease-in-out;
+    animation: squeeze 1.2s infinite;
+}
+
+.eyes:before {
+    left: -65%;
+}
+
+.eyes:after {
+    right: -65%;
+}
+
+.shine-left, .shine-right {
+    height: 3px;
+    width: 3px;
+    background-color: white;
+    border-radius: 100%;
+    position: absolute;
+    top: 18px;
+}
+
+.shine-left {
+    left: -8px;
+}
+
+.shine-right {
+    left: 22px;
+    z-index: 10;
+}
+
+/* collar */
+
+.bandana {
+    border-top: 55px solid rgb(78, 120, 179);
+    border-left: solid 60px transparent;
+    border-right: solid 60px transparent;
+    margin-top: 5%;
+    height: 50px;
+}
+
+/* adds curve to bandana on neck */
+
+.bandana-curve {
+    content: '';
+    background: #3c3b3c;
+    width: 120px;
+    height: 5%;
+    margin-top: -60px;
+    border-radius: 0 0 50% 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 11;
+}
+
+.stomach {
+    width: 56%;
+    height: 27%;
+    background: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 120px 120px 0 0;
+    border-top: 6px solid #Df8f2E;
+}
+
+.legs {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 12px;
+}
+
+/* feet */
+
+.legs:before, .legs:after {
+    height: 20px;
+    border-radius: 20px 20px 0 0;
+    display: inline-block;
+    content: '';
+    position: absolute;
+    background: #2b2a2b;
+    bottom: 0;
+    width: 45px;
+}
+
+.legs:before {
+    left: -37px;
+    border-left: 2px solid rgb(163, 104, 32);
+}
+
+.legs:after {
+    right: -37px;
+    border-right: 2px solid rgb(163, 104, 32);
+}
+
+/* creates back legs */
+
+.left, .right {
+    width: 70px;
+    height: 70px;
+    background: #2b2a2b;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 10px;
+}
+
+/* front feet */
+
+.left-foot, .right-foot {
+    width: 28px;
+    height: 20px;
+    background: #3c3b3c;
+    border-radius: 20px 20px 0 0;
+    bottom: 0;
+    position: absolute;
+    z-index: 100;
+}
+
+.left-foot {
+    left: -20px;
+    border-left: 2px solid #Df8f2E;
+}
+
+.right-foot {
+    left: 110px;
+    border-right: 2px solid #Df8f2E;
+}
+
+.left {
+    left: -15px;
+    z-index: -2;
+    border-radius: 20px 0 0 0;
+    transform: rotate(-18deg);
+}
+
+.right {
+    right: -15px;
+    border-radius: 0 20px 0 0;
+    z-index: -2;
+    transform: rotate(18deg);
+}
+
+.ears {
+    position: absolute;
+    z-index: -1;
+    top: -20px;
+}
+
+.ears:after, .ears:before {
+    content: '';
+    display: inline-block;
+    background: #2b2a2b;
+    width: 40px;
+    height: 90px;
+    border-radius: 100% 100% 0 0;
+}
+
+.ears:after {
+    transform: translateX(40px);
+    border: 10px solid #3c3b3c;
+    box-sizing: border-box;
+}
+
+.tail {
+    background: #3c3b3c;
+    width: 14px;
+    height: 80px;
+    position: absolute;
+    right: 10px;
+    bottom: 40px;
+    transform: rotate(30deg);
+    border-radius: 14px;
+    transform-origin: bottom;
+    transition: 300ms;
+    animation: shake .08s infinite alternate;
+    z-index: -3;
+}
+
+.ball {
+    z-index: 999;
+    background-color: #FF6B5A;
+    height: 25px;
+    width: 25px;
+    border-radius: 100%;
+    position: absolute;
+    bottom: -10px;
+    left: 10px;
+    transform: translateX(-50%);
+    animation: bounce 0.6s infinite ease-in alternate-reverse;
+}
+
+/* happy change for dog on pet/hover */
+
+.dog:hover {
+    cursor: grab;
+}
+
+.dog:hover .eyes {
+    height: 3px;
+}
+
+.dog:hover .shine-left, .dog:hover .shine-right {
+    opacity: 0;
+}
+
+.dog:hover .eyes:after, .dog:hover .eyes:before {
+    height: 1px;
+    border-radius: 100px 100px 0 0;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(-150px);
+    }
+    93% {
+        transform: scaleY(1.15);
+    }
+    100% {
+        transform: scaleX(1.8);
+    }
+}
+
+@keyframes squeeze {
+    90% {
+        transform: none;
+        animation-timing-function: ease-in;
+    }
+    93% {
+        transform: scale(1.2, 0.3);
+    }
+    100% {
+        animation-timing-function: ease-out;
+    }
+}
+
+@keyframes grow {
+    0% {
+        animation-timing-function: ease-in;
+    }
+    100% {
+        height: 35px;
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(30deg);
+    }
+    100% {
+        transform: rotate(40deg);
+    }
 }
