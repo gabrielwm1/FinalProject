@@ -3,21 +3,38 @@ const submit = {
     templateUrl: "app/components/form/form.html",
     controller: ["MainService", function(MainService){
         const vm = this;
-        vm.lowImportance = false;
-        vm.medImportance = false;
-        vm.highImportance = false; 
-
         vm.saveTask = (task) => {
-            console.log(task);
-
-            //console.log("test");
             MainService.postTodo(task);
         };
 
-        vm.taskImportance = (value) => {
-            MainService.put(value);
+        vm.addImportance = (value) => {
+           if (value === 1){
+               vm.newTask.importance = 1;
+               
+           }
+           else if (value === 2){
+               vm.newTask.importance = 2;
+           }
+           else if (value === 3){
+               vm.newTask.importance = 3;
+           }
+           else {
+               vm.newTask.importance = 0; 
+           }
+           console.log(value);
         }
 
+        vm.addFrequency = (value) =>{
+            if (value === "daily"){
+                vm.newTask.daily = true;
+            }
+            else if (value === "weekly"){
+                vm.newTask.weekly = true;
+            }
+            else {
+                vm.newTask.todo = true;
+            }
+        }
 
         vm.medImportance = () => {
             vm.medImportance = !vm.medImportance;
