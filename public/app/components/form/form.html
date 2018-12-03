@@ -1,17 +1,25 @@
-<form ng-submit="$ctrl.saveTask(task)">
+<form ng-submit="$ctrl.saveTask($ctrl.newTask)">
     <p>Use the form below to add task.</p>
-    <input ng-model="task.task" type="text">
+    <input ng-model="$ctrl.newTask.task" type="text">
     <label for="">Importance:</label>
-    <select ng-model="task.importance">
+    <div>
+        <input ng-model = "$ctrl.taskImportance($ctrl.value)" type="button" value = "1">
+        <input type = "button" value = "2">
+        <input type = "button" value = "3">
+
+    </div>
+    
+    <!-- <button ng-click="$ctrl.getImportance($ctrl.importance)"
+            ng-click="$ctrl.flipLow()">
         <option value="1">Low Priority</option>
         <option value="2">Medium Priority</option>
-        <option value="3">High Priority</option>
+        <option value="3">High Priority</option> -->
     </select>
-    <input ng-model="task.daily" type="radio" id="daily" value="true" checked>
+    <input ng-model="$ctrl.newTask.daily" type="radio" id="daily" value="true">
     <label for="daily">Daily</label>
-    <input ng-model="task.weekly" type="radio" id="weekly" value="true" checked>
+    <input ng-model="$ctrl.newTask.weekly" type="radio" id="weekly" value="true">
     <label for="weekly">Weekly</label>
-    <input ng-model="task.todo" type="radio" id="todo" value="true" checked>
+    <input ng-model="$ctrl.newTask.todo" type="radio" id="todo" value="true">
     <label for="todo">Task</label>
-    <button class="editbtn">Update</button>
+    <button class="editbtn">Update</button> 
 </form>
