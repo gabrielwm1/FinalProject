@@ -3,7 +3,7 @@
     <section class="box">
         <h2>Daily</h2>
         <section ng-repeat="task in $ctrl.dailyTask" class="daily-container">
-            <p>{{task.task}}<i class="fa fa-times" aria-hidden="true" ng-click="$ctrl.delete(id)"></i></p>
+            <p><input type="radio">{{task.task}}<i class="fa fa-times" aria-hidden="true" ng-click="$ctrl.delete(task.id)"></i></p>
             <i class="fa fa-pencil" aria-hidden="true" ng-click="$ctrl.put(updatedTask)"></i>
         </section>
     </section>
@@ -11,7 +11,7 @@
     <section class="box">
         <h2>Weekly</h2>
         <section ng-repeat="task in $ctrl.weeklyTask" class="weekly-container">
-            <p>{{task.task}}<i class="fa fa-times" aria-hidden="true" ng-click="$ctrl.delete(id)"></i></p>
+            <p><input type="radio">{{task.task}}<i class="fa fa-times" aria-hidden="true" ng-click="$ctrl.delete(task.id)"></i></p>
             <i class="fa fa-pencil" aria-hidden="true" ng-click="$ctrl.put(updatedTask)"></i>
         </section>
     </section>
@@ -19,8 +19,8 @@
     <section class="box">
         <h2>To-Do</h2>
         <section ng-repeat="task in $ctrl.todoTask" class="todo-container">
-            <p>{{task.task}}<i class="fa fa-times" aria-hidden="true" ng-click="$ctrl.delete(id)"></i></p>
-            <i class="fa fa-pencil" aria-hidden="true" ng-click="$ctrl.put(updatedTask)"></i>
+            <p><input type="radio">{{task.task}}<i class="fa fa-times" aria-hidden="true" ng-click="$ctrl.delete(task.id)"></i></p>
+            <i class="fa fa-pencil-square" aria-hidden="true" ng-click="$ctrl.put(updatedTask)"></i>
         </section>
     </section>
 

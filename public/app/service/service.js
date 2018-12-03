@@ -33,7 +33,7 @@ function MainService($http, $location){
 
     self.delete = (id) => {
         return $http({
-            url:`/task/${id}`,
+            url:`/tasks/${id}`,
             method:"DELETE",
         });
     };
