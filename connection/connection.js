@@ -5,7 +5,7 @@ const pool = {
     password: "gabriel",
     host: "localhost",
     port: "5432",
-    database: "taskDatabase",
+    database: "tasksDatabase",
     ssl: false
 };
 
