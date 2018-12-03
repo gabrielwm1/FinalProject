@@ -16,6 +16,15 @@ const todolist = {
         function updateTodo(result){
             vm.todoTask = result.data;
         };
+        
+        vm.delete = (id) => {
+            MainService.delete(id).then((result) => {
+                MainService.getWeekly().then(updateWeekly);
+                MainService.getDaily().then(updateDaily);
+                MainService.getTodo().then(updateTodo);
+            });
+           
+        };
 
         //gets tasks on load
         MainService.getDaily().then(updateDaily);
