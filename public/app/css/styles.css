@@ -174,11 +174,53 @@ input {
     justify-content: space-between;
 }
 
-button {
+.form-btns button {
     margin: 10px;
-    padding: 10px;
+    /* padding: 5px; */
     flex-grow: 1;
+    border-radius: 10px;
+    color: white;
+    
 }
+
+.low{
+    background-color: #68BA56;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.medium{
+    
+    background-color: #e0a707;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.high{
+    background-color: #BF4D2E;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.daily-btn, .weekly-btn, .todo-btn{
+    background-color: #BC66AF;
+    font-size: 18px;
+    padding: 15px;
+    letter-spacing: 1px;
+
+}
+
+.edit-btn{
+    background-color: #659EBE;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    color: white;
+    font-size: 18px;
+    box-shadow: 2px 2px 5px 1px #BFCCD1;
+}
+
 
 /* ____________ */
 /* DOG STYLING */
