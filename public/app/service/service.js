@@ -47,12 +47,14 @@ function MainService($http, $location){
     };
 
     self.loadEdit = () => {
-        $location.path("/submit");
+        $location.path("/todolist");
       };
 
     self.loadList = () => {
       $location.path("/todolist");
      };
+
+
     
 
 }
