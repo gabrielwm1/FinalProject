@@ -3,7 +3,6 @@ const submit = {
     templateUrl: "app/components/form/form.html",
     controller: ["MainService", function(MainService){
         const vm = this;
-    
         vm.saveTask = (task) => {
             MainService.postTodo(task);
         };
