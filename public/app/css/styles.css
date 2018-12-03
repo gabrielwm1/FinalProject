@@ -80,6 +80,42 @@ body {
     background-size: cover;
 }
 
+
+/* To Do list styling */
+.main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100vw;
+    height: 100vh;
+    border: 2px solid black;
+    padding: 20px;
+}
+
+.box{
+    width: 20%;
+    height: 30%;
+    border: 1px solid black;
+    padding: 2%;
+    border-radius: 5%;
+    box-shadow: 2px 2px 0px 0px grey;
+}
+
+
+
+.daily-container,.weekly-container,.todo-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border: 2px solid black;
+    padding: 4%;
+    margin-top: 10px;
+}
+
+
+/*Form Styling*/
+
+
 .form-modal {
     position: absolute;
     left: 0;
@@ -580,3 +616,4 @@ input {
         transform: rotate(40deg);
     }
 }
+
