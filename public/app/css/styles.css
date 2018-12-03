@@ -1,0 +1,77 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.linking {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+}
+
+/* navigation styling */
+
+.nav-bar {
+    height: 302px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 15px;
+    position: fixed;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    box-shadow: 2px 2px 5px 1px rgb(87, 133, 151);
+}
+
+.nav-form {
+    background-color: #EFF3F4;
+    height: 150px;
+    width: 150px;
+    border-radius: 15px 15px 0 0;
+    text-align: center;
+}
+
+.fa-plus {
+    margin-top: 30px;
+    color: #E0A707;
+    font-size: 90px;
+    transition: ease-in-out 0.3s;
+}
+
+.fa-plus:hover {
+    color: rgb(190, 142, 7);
+    cursor: pointer;
+}
+
+.nav-todo {
+    background-color: #EFF3F4;
+    height: 150px;
+    width: 150px;
+    border-radius: 0 0 15px 15px;
+    text-align: center;
+}
+
+.fa-th-list {
+    margin-top: 30px;
+    color: #E0A707;
+    font-size: 90px;
+    transition: ease-in-out 0.3s;
+}
+
+.fa-th-list:hover {
+    color: rgb(190, 142, 7);
+    cursor: pointer;
+}
+
+/* home styling */
+
+.home-bg {
+    margin: 0;
+    min-width: auto;
+    min-height: 100vh;
+    background-image: url("../images/background-img.jpg");
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
