@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 148 150" style="enable-background:new 0 0 148 150;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#E0A707;}
+	.st1{fill:#E0BC63;}
+	.st2{clip-path:url(#SVGID_2_);}
+	.st3{opacity:0.62;}
+</style>
+<g>
+	<g>
+		<g>
+			<g>
+				<path class="st0" d="M0,74c0,86,79.5,75.9,79.5,75.9L80.6,0C80.6,0,0-5,0,74z"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<ellipse class="st1" cx="82.5" cy="75" rx="65.5" ry="75"/>
+			</g>
+		</g>
+		<g>
+			<defs>
+				<path id="SVGID_1_" d="M0,74c0,86,79.5,75.9,79.5,75.9L80.6,0C80.6,0,0-5,0,74z"/>
+			</defs>
+			<clipPath id="SVGID_2_">
+				<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+			</clipPath>
+			<g class="st2">
+				<g>
+					<rect y="8.5" class="st1" width="78" height="5"/>
+				</g>
+				<g>
+					<rect x="-0.4" y="24.8" class="st1" width="78" height="5"/>
+				</g>
+				<g>
+					<rect x="-0.8" y="41.1" class="st1" width="78" height="5"/>
+				</g>
+				<g>
+					<rect x="-1.1" y="57.4" class="st1" width="78" height="5"/>
+				</g>
+				<g>
+					<rect x="-1.5" y="73.8" class="st1" width="78" height="5"/>
+				</g>
+				<g>
+					<rect x="-1.9" y="90.1" class="st1" width="78" height="5"/>
+				</g>
+				<g>
+					<rect x="-2.2" y="106.4" class="st1" width="78" height="5"/>
+				</g>
+				<g>
+					<rect x="-2.6" y="122.7" class="st1" width="78" height="5"/>
+				</g>
+				<g>
+					<rect x="-3" y="139" class="st1" width="78" height="5"/>
+				</g>
+			</g>
+		</g>
+		<g class="st3">
+			<g>
+				<path class="st0" d="M82,140.9c-31.9,0-57.9-29.8-57.9-66.4S50.1,8.1,82,8.1c31.9,0,57.9,29.8,57.9,66.4S113.9,140.9,82,140.9z
+					 M82,13.9c-28.7,0-52.1,27.2-52.1,60.6s23.4,60.6,52.1,60.6c28.7,0,52.1-27.2,52.1-60.6S110.7,13.9,82,13.9z"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<ellipse class="st0" cx="87" cy="76" rx="26" ry="32"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<path class="st0" d="M58.8,56.1c0.4-3.7,3.3-6.7,7-6.7c2.3,0,4.6,1.1,6.2,4.6c4,9-6.5,40-6.5,40s3.5,7,0.5,9s-19,5-16-9
+					C52.7,81.6,57.7,67.5,58.8,56.1z"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<path class="st0" d="M114.1,55.1c-0.3-3.7-2.9-6.7-6-6.7c-1.9,0-4,1.1-5.3,4.6c-3.4,9,5.6,40,5.6,40s-3,7-0.4,9
+					c2.6,2,16.3,5,13.7-9C119.4,80.6,115.1,66.5,114.1,55.1z"/>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>
