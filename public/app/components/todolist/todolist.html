@@ -1,3 +1,29 @@
-<section ng-repeat="task in $ctrl.dailyTask"><p>{{task.task}}</p></section>
-<section ng-repeat="task in $ctrl.weeklyTask"><p>{{task.task}}</p></section>
-<section ng-repeat="task in $ctrl.todoTask"><p>{{task.task}}</p></section>
+<h1>Planimals</h1>
+<section class="main-container">
+    <section class="box">
+        <h2>Daily</h2>
+        <section ng-repeat="task in $ctrl.dailyTask" class="daily-container">
+            <p>{{task.task}}<i class="fa fa-times" aria-hidden="true" ng-click="$ctrl.delete(id)"></i></p>
+            <i class="fa fa-pencil" aria-hidden="true" ng-click="$ctrl.put(updatedTask)"></i>
+        </section>
+    </section>
+
+    <section class="box">
+        <h2>Weekly</h2>
+        <section ng-repeat="task in $ctrl.weeklyTask" class="weekly-container">
+            <p>{{task.task}}<i class="fa fa-times" aria-hidden="true" ng-click="$ctrl.delete(id)"></i></p>
+            <i class="fa fa-pencil" aria-hidden="true" ng-click="$ctrl.put(updatedTask)"></i>
+        </section>
+    </section>
+
+    <section class="box">
+        <h2>To-Do</h2>
+        <section ng-repeat="task in $ctrl.todoTask" class="todo-container">
+            <p>{{task.task}}<i class="fa fa-times" aria-hidden="true" ng-click="$ctrl.delete(id)"></i></p>
+            <i class="fa fa-pencil" aria-hidden="true" ng-click="$ctrl.put(updatedTask)"></i>
+        </section>
+    </section>
+
+</section>
+
+
