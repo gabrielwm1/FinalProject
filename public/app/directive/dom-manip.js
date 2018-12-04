@@ -1,24 +1,24 @@
 "use strict";
 
-function domManip() {
-    return {
-        restrict: "A",
-        link: function ($scope, $element, $attrs, $location) {
+// function domManip() {
+//     return {
+//         restrict: "A",
+//         link: function ($scope, $element, $attrs, $location) {
 
-            $element.on("click", () => {
+//             $element.on("click", () => {
 
-                if ($element[0].classList[2] === "form-exit") {                    
-                    $element[0].offsetParent.offsetParent.classList.add("hide");
-                }
+//                 if ($element[0].classList[2] === "form-exit") {                    
+//                     $element[0].offsetParent.offsetParent.classList.add("hide");
+//                 }
 
-                console.log($element);
+//                 console.log($element);
                 
 
-            })
-        }
-    };
-}
+//             })
+//         }
+//     };
+// }
 
-angular
-    .module("App")
-    .directive("domManip", domManip);
+// angular
+//     .module("App")
+//     .directive("domManip", domManip);

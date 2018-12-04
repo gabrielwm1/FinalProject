@@ -6,6 +6,10 @@ const submit = {
         vm.saveTask = (task) => {
             MainService.postTodo(task);
         };
+        vm.toggleForm = () => {
+            MainService.showForm = !MainService.showForm;
+            console.log("test");
+        };
 
         vm.addImportance = (value) => {
            if (value === 1){
