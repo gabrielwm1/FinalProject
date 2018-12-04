@@ -32,12 +32,9 @@ const todolist = {
             } else {
                 task.completed = true
             }
-            // console.log(task);
             
             MainService.put(task).then((result) => {
-                console.log(result);
                 vm.getAll();
-
             });
            
         };

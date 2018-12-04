@@ -7,28 +7,28 @@ let req = null;
 
 // return
 function getTasks(req,res){
-    pool.query("select * from toDO order by id").then((result) => {
+    pool.query("SELECT * FROM todo order by importance").then((result) => {
         res.json(result.rows);
     });
 }
 
 //gets daily tasks
 routes.get("/tasks/daily", (req, res) => {
-    pool.query("select * from toDO where daily = true").then((result) => {
+    pool.query("SELECT * FROM todo WHERE daily = true ORDER BY importance DESC, id").then((result) => {
         res.json(result.rows);
     })
 });
 
 //gets weekly tasks
 routes.get("/tasks/weekly", (req, res) => {
-    pool.query("select * from toDO where weekly = true").then((result) => {
+    pool.query("SELECT * FROM todo WHERE weekly = true ORDER BY importance DESC, id").then((result) => {
         res.json(result.rows);
     })
 });
 
 //gets todos
 routes.get("/tasks/todo", (req, res) => {
-    pool.query("select * from toDO where todo = true").then((result) => {
+    pool.query("SELECT * FROM todo WHERE todo = true ORDER BY importance DESC, id").then((result) => {
         res.json(result.rows);
     })
 });
@@ -50,7 +50,6 @@ routes.delete("/tasks/:id", (req, res) => {
 
 // update task
 routes.put("/tasks/:id", (req, res) => {
-    console.log("clicked");
     pool.query("update toDO set task=$1::text, importance=$2::int, daily=$3::boolean, weekly=$4::boolean, todo=$5::boolean, completed=$6::boolean WHERE id=$7::int", [req.body.task, req.body.importance, req.body.daily, req.body.weekly, req.body.todo, req.body.completed, req.params.id]).then(() => {
         getTasks(req, res);
         });
