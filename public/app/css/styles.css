@@ -36,16 +36,17 @@ body {
     text-align: center;
 }
 
-.fa-plus {
+.fa-plus, .fa-th-list{
     margin-top: 30px;
     color: #E0A707;
     font-size: 90px;
-    transition: ease-in-out 0.3s;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
-.fa-plus:hover {
-    color: rgb(190, 142, 7);
+.fa-th-list:hover, .fa-plus:hover {
+    color: #E0BC63;
     cursor: pointer;
+    font-size: 95px;
 }
 
 .nav-todo {
@@ -54,18 +55,6 @@ body {
     width: 150px;
     border-radius: 0 0 15px 15px;
     text-align: center;
-}
-
-.fa-th-list {
-    margin-top: 30px;
-    color: #E0A707;
-    font-size: 90px;
-    transition: ease-in-out 0.3s;
-}
-
-.fa-th-list:hover {
-    color: rgb(190, 142, 7);
-    cursor: pointer;
 }
 
 /* home styling */
@@ -160,7 +149,7 @@ body {
 }
 
 .coin:hover .currency {
-    font-size: 40px;
+    font-size: 35px;
     cursor: pointer;
 }
 
@@ -228,25 +217,22 @@ input {
     color: white;
 }
 
-.low {
-    background-color: #68BA56;
+.low, .medium, .high {
     font-size: 40px;
     font-weight: 700;
     letter-spacing: 2px;
+}
+
+.low {
+    background-color: #68BA56;
 }
 
 .medium {
     background-color: #e0a707;
-    font-size: 40px;
-    font-weight: 700;
-    letter-spacing: 2px;
 }
 
 .high {
     background-color: #BF4D2E;
-    font-size: 40px;
-    font-weight: 700;
-    letter-spacing: 2px;
 }
 
 .daily-btn, .weekly-btn, .todo-btn {
@@ -273,9 +259,7 @@ input {
 }
 
 /* ____________ */
-
 /* DOG STYLING */
-
 /* ___________ */
 
 /* dog position */
@@ -405,6 +389,28 @@ input {
 .shine-right {
     left: 22px;
     z-index: 10;
+}
+
+.shine-left:before, .shine-right:before {
+    content: "";
+    height: 4px;
+    width: 10px;
+    background-color: #Df8f2E;
+    z-index: 5;
+    border-radius: 10px;
+    position: absolute;
+}
+
+.shine-left:before {
+    top: -13px;
+    left: -7px;
+    transform: rotate(-18deg);
+}
+
+.shine-right:before {
+    top: -13px;
+    left: 5px;
+    transform: rotate(18deg);
 }
 
 /* collar */
