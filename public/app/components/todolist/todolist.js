@@ -57,6 +57,12 @@ const todolist = {
             });
            
         };
+
+        vm.updateTask = (task) => {
+            MainService.put(task).then((result) => {
+                vm.getAll();
+            });
+        };
         
         vm.delete = (id) => {
             MainService.delete(id).then((result) => {
