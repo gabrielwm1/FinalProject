@@ -1,6 +1,7 @@
 "use strict";
 function MainService($http, $location){
     const self = this;
+    const showForm = false;
 
     self.getDaily = () => {
         return $http({

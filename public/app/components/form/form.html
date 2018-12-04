@@ -1,7 +1,7 @@
 <form>
     <h2>Add Task</h2>
-    <i dom-manip class="fas fa-times form-exit"></i>
-    <section class="form-contain">
+    <i class="fas fa-times form-exit" on-click="$ctrl.toggleForm()"></i>
+    <section class="form-contain" ng-class="{'hide': $ctrl.showForm === true}">
         <p class="form-label">Task:</p>
         <input ng-model="$ctrl.newTask.task" type="text">
         <p class="form-label">Importance:</p>
