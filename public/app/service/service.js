@@ -40,7 +40,7 @@ function MainService($http, $location){
 
     self.put = (updatedTask) => {
         return $http({
-            url:`/task/${updatedTask.id}`,
+            url:`/tasks/${updatedTask.id}`,
             method:"UPDATE",
             data: updatedTask
         });
