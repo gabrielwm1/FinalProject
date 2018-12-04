@@ -3,7 +3,7 @@ const submit = {
     templateUrl: "app/components/form/form.html",
     controller: ["$rootScope", "MainService", function($rootScope, MainService){
         const vm = this;
-        vm.showForm = true;
+        //vm.showForm = true;
 
         vm.saveTask = (task) => {
             MainService.postTodo(task);
@@ -13,15 +13,15 @@ const submit = {
             $rootScope.$broadcast("hideForm", vm.showForm);
 
         }
-        vm.toggleForm = () => {
-            if (vm.showForm === false ) {
-                vm.showForm = true;
-                $rootScope.$broadcast("toggleForm", vm.showForm);
-            } else {
-                vm.showForm = false;
+        // vm.toggleForm = () => {
+        //     if (vm.showForm === false ) {
+        //         vm.showForm = true;
+        //         $rootScope.$broadcast("toggleForm", vm.showForm);
+        //     } else {
+        //         vm.showForm = false;
                 
-            };
-        };
+        //     };
+        // };
 
         vm.addImportance = (value) => {
            if (value === 1){

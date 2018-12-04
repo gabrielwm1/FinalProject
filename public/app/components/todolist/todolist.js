@@ -3,10 +3,19 @@ const todolist = {
     templateUrl: "app/components/todolist/todolist.html",
     controller: ["$rootScope", "MainService", function($rootScope, MainService){
         const vm = this;
+        //vm.displayForm;
+        // vm.showForm = true;
+        $rootScope.$on("loadForm", (event, data) => {
+            vm.showForm = data;
+            console.log(vm.showForm);
+        });
 
         $rootScope.$on("hideForm", (event, data) => {
             vm.showForm = data;
+            console.log(vm.showForm);
+            
         });
+
         // $scope.showForm = false;
         // $scope.toggleForm = () => {
         // $scope.showForm = !$scope.showForm;

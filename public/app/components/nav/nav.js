@@ -1,16 +1,18 @@
 "use strict";
 const navbar = {
     templateUrl: "app/components/nav/nav.html",
-    controller: ["$rootScope","MainService",function($rootScope, MainService){
+    controller: ["$rootScope","MainService", "$location", function($rootScope, MainService, $location){
         const vm = this;
-        vm.showForm = true;
-        vm.toggleForm = () => {
-            vm.showForm = false ;
-            $rootScope.$broadcast("toggleForm", vm.showForm);
-            console.log(data);
-           // MainService.toggleForm();
-           // MainService.toggleForm();
-        };
+        //vm.showForm = false;
+        // vm.loadForm = () => {
+            
+        //    // MainService.toggleForm();
+        //    // MainService.toggleForm();
+        // };
+        // vm.hideForm = () => {
+            
+        //     console.log(vm.showForm);
+        // }
 
         // vm.hideForm = () => {
         //     vm.showForm = !vm.showForm;
@@ -23,12 +25,23 @@ const navbar = {
         //     vm.showForm = data;
         // });
 
-        vm.loadEdit = () => {
-            MainService.loadEdit();
+        vm.loadForm = () => {
+            vm.showForm = true;
+            //MainService.loadEdit();
+            $rootScope.$broadcast("loadForm", vm.showForm);
+            $location.path("/todolist");
+
+            //console.log(vm.showForm);
+            
         }
 
-        vm.loadList = () =>{
-            MainService.loadList();
+        vm.hideForm = () =>{
+            vm.showForm= false;
+           // MainService.loadList();
+            $rootScope.$broadcast("hideForm", vm.showForm);
+            $location.path("/todolist");
+
+            
         }
 
 
