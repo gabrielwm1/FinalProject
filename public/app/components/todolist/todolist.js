@@ -27,7 +27,7 @@ const todolist = {
         };
 
         //gets tasks on load
-        vm.getAll =() => {
+        vm.getAll = () => {
         MainService.getDaily().then(updateDaily);
         MainService.getWeekly().then(updateWeekly);
         MainService.getTodo().then(updateTodo);
@@ -36,10 +36,14 @@ const todolist = {
         vm.getAll(); 
 
         vm.completedTask = (task) => {
+            if (task.completed === true) {
+                task.completed = false
+            } else {
+                task.completed = true
+            }
+            
             MainService.put(task).then((result) => {
-                console.log(result);
                 vm.getAll();
-
             });
            
         };
