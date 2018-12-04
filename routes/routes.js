@@ -50,9 +50,10 @@ routes.delete("/tasks/:id", (req, res) => {
 
 // update task
 routes.put("/tasks/:id", (req, res) => {
+    console.log("clicked");
     pool.query("update toDO set task=$1::text, importance=$2::int, daily=$3::boolean, weekly=$4::boolean, todo=$5::boolean, completed=$6::boolean WHERE id=$7::int", [req.body.task, req.body.importance, req.body.daily, req.body.weekly, req.body.todo, req.body.completed, req.params.id]).then(() => {
         getTasks(req, res);
-        })
+        });
 });
 
 module.exports = routes;

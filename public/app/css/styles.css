@@ -120,6 +120,10 @@ body {
     background-color: #659EBE;
 }
 
+.completed{
+    text-decoration: line-through;
+}
+
 .fa-times{
     position:absolute;
     right: 50px;
