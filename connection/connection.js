@@ -1,4 +1,4 @@
-// "use strict";
+"use strict";
 // const pg = require("pg");
 // const pool = {
 //     user: "postgres",
@@ -9,17 +9,27 @@
 //     ssl: false
 // };
 
-// module.exports  = new pg.Pool(pool);
-
-"use strict";
+//ericas pool
 const pg = require("pg");
 const pool = {
     user: "postgres",
-    password: "matt",
+    password: "password",
     host: "localhost",
     port: 5432,
-    database: "taskDatabase",
+    database: "tasksDatabase",
     ssl: false
 };
+
+
+
+// const pg = require("pg");
+// const pool = {
+//     user: "postgres",
+//     password: "matt",
+//     host: "localhost",
+//     port: 5432,
+//     database: "taskDatabase",
+//     ssl: false
+// };
 
 module.exports = new pg.Pool(pool);
