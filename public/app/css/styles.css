@@ -44,7 +44,7 @@ body {
 }
 
 .fa-th-list:hover, .fa-plus:hover {
-    color: rgb(190, 142, 7);
+    color: #E0BC63;
     cursor: pointer;
     font-size: 95px;
 }
