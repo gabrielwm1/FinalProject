@@ -1,8 +1,9 @@
 "use strict";
 const todolist = {
     templateUrl: "app/components/todolist/todolist.html",
-    controller: ["$rootScope", "MainService", function($rootScope, MainService){
+    controller: ["$rootScope", "MainService", function ($rootScope, MainService) {
         const vm = this;
+
 
         $rootScope.$on("hideForm", (event, data) => {
             vm.showForm = data;
@@ -10,31 +11,31 @@ const todolist = {
         // $scope.showForm = false;
         // $scope.toggleForm = () => {
         // $scope.showForm = !$scope.showForm;
-           // MainService.toggleForm();
-           // MainService.toggleForm();
+        // MainService.toggleForm();
+        // MainService.toggleForm();
         // };
 
         //updates tasks from promise
-        function updateDaily(result){            
+        function updateDaily(result) {
             vm.dailyTask = result.data;
         };
 
-        function updateWeekly(result){
+        function updateWeekly(result) {
             vm.weeklyTask = result.data;
         };
 
-        function updateTodo(result){
+        function updateTodo(result) {
             vm.todoTask = result.data;
         };
 
         //gets tasks on load
         vm.getAll = () => {
-        MainService.getDaily().then(updateDaily);
-        MainService.getWeekly().then(updateWeekly);
-        MainService.getTodo().then(updateTodo);
+            MainService.getDaily().then(updateDaily);
+            MainService.getWeekly().then(updateWeekly);
+            MainService.getTodo().then(updateTodo);
         };
 
-        vm.getAll(); 
+        vm.getAll();
 
         vm.completedTask = (task) => {
             if (task.completed === true) {
@@ -42,11 +43,11 @@ const todolist = {
             } else {
                 task.completed = true
             }
-            
+
             MainService.put(task).then((result) => {
                 vm.getAll();
             });
-           
+
         };
 
         vm.updateTask = (task) => {
@@ -54,18 +55,30 @@ const todolist = {
                 vm.getAll();
             });
         };
-        
+
         vm.delete = (id) => {
             MainService.delete(id).then((result) => {
                 vm.getAll();
             });
-           
+
         };
- 
+
+        vm.toggleCompleted = () => {
+  
+            if (vm.toggle === true) {
+                 vm.toggle = false;
+            } else {
+                 vm.toggle = true;
+            }
+            console.log(vm.toggle);
+            vm.getAll();
+        };
         
+
+
     }]
 }
 
-angular 
+angular
     .module("App")
     .component("todolist", todolist);

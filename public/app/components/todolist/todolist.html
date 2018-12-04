@@ -1,8 +1,7 @@
-<h1>Planimals</h1>
 <section class="main-container">
     <section class="box">
         <h2>Daily</h2>
-        <section ng-repeat="task in $ctrl.dailyTask" class="daily-container">
+        <section ng-hide="task.completed === true && $ctrl.toggle === true" ng-repeat="task in $ctrl.dailyTask" class="daily-container">
             <input ng-click="$ctrl.completedTask(task)" class="radio" type="radio">
             <input ng-model="task.task" class="task-name" ng-blur="$ctrl.updateTask(task);" ng-class="{'completed': task.completed === true}">
             <i class="fa fa-times" aria-hidden="true" ng-click="$ctrl.delete(task.id)"></i>
@@ -12,7 +11,7 @@
 
     <section class="box">
         <h2>Weekly</h2>
-        <section ng-repeat="task in $ctrl.weeklyTask" class="weekly-container">
+        <section ng-hide="task.completed === true && $ctrl.toggle === true" ng-repeat="task in $ctrl.weeklyTask" class="weekly-container">
             <input ng-click="$ctrl.completedTask(task)" class="radio" type="radio">
             <input ng-model="task.task" class="task-name" ng-blur="$ctrl.updateTask(task);" ng-class="{'completed': task.completed === true}">
             <i class="fa fa-times" aria-hidden="true" ng-click="$ctrl.delete(task.id)"></i>
@@ -22,7 +21,7 @@
 
     <section class="box">
         <h2>To-Do</h2>
-        <section ng-repeat="task in $ctrl.todoTask" class="todo-container">
+        <section ng-hide="task.completed === true && $ctrl.toggle === true" ng-repeat="task in $ctrl.todoTask" class="todo-container">
             <input ng-click="$ctrl.completedTask(task)" class="radio" type="radio">
             <input ng-model="task.task" class="task-name" ng-blur="$ctrl.updateTask(task);" ng-class="{'completed': task.completed === true}">
             <i class="fa fa-times" aria-hidden="true" ng-click="$ctrl.delete(task.id)"></i>
@@ -30,14 +29,16 @@
         </section>
     </section>
 
-    <button class="hide-complete">Hide Completed</button>
-
-
-    <section class="form-modal" ng-hide="$ctrl.showForm">
+    <section class="form-modal hide" ng-hide="$ctrl.showForm">
             <section class="form-overlay"></section>
             <submit></submit>
     </section>
 
-
+    <div class="toggle-container">
+        <label class="switch">
+            <input type="checkbox" />    
+            <div ng-click="$ctrl.toggleCompleted();"></div>
+        </label>
+      </div>
 
 </section>
