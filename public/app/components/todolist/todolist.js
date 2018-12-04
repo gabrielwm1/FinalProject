@@ -1,8 +1,17 @@
 "use strict";
 const todolist = {
     templateUrl: "app/components/todolist/todolist.html",
-    controller: ["MainService", function(MainService){
+    controller: ["$rootScope", "MainService", function($rootScope, MainService){
         const vm = this;
+        $rootScope.$on("toggleForm", (event, data) => {
+            vm.showForm = data;
+        });
+        // $scope.showForm = false;
+        // $scope.toggleForm = () => {
+        // $scope.showForm = !$scope.showForm;
+           // MainService.toggleForm();
+           // MainService.toggleForm();
+        // };
 
         //updates tasks from promise
         function updateDaily(result){            
@@ -16,21 +25,33 @@ const todolist = {
         function updateTodo(result){
             vm.todoTask = result.data;
         };
-        
-        vm.delete = (id) => {
-            MainService.delete(id).then((result) => {
-                MainService.getWeekly().then(updateWeekly);
-                MainService.getDaily().then(updateDaily);
-                MainService.getTodo().then(updateTodo);
-            });
-           
-        };
 
         //gets tasks on load
+        vm.getAll =() => {
         MainService.getDaily().then(updateDaily);
         MainService.getWeekly().then(updateWeekly);
         MainService.getTodo().then(updateTodo);
+        };
 
+        vm.getAll(); 
+
+        vm.completedTask = (task) => {
+            MainService.put(task).then((result) => {
+                console.log(result);
+                vm.getAll();
+
+            });
+           
+        };
+        
+        vm.delete = (id) => {
+            MainService.delete(id).then((result) => {
+                vm.getAll();
+            });
+           
+        };
+ 
+        
     }]
 }
 
