@@ -1,8 +1,17 @@
 "use strict";
 const todolist = {
     templateUrl: "app/components/todolist/todolist.html",
-    controller: ["MainService", function(MainService){
+    controller: ["$rootScope", "MainService", function($rootScope, MainService){
         const vm = this;
+        $rootScope.$on("toggleForm", (event, data) => {
+            vm.showForm = data;
+        });
+        // $scope.showForm = false;
+        // $scope.toggleForm = () => {
+        // $scope.showForm = !$scope.showForm;
+           // MainService.toggleForm();
+           // MainService.toggleForm();
+        // };
 
         //updates tasks from promise
         function updateDaily(result){            

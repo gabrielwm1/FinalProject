@@ -1,14 +1,18 @@
 "use strict";
 const submit = {
     templateUrl: "app/components/form/form.html",
-    controller: ["MainService", function(MainService){
+    controller: ["$rootScope", "MainService", function($rootScope, MainService){
         const vm = this;
+        vm.showForm = false;
+
         vm.saveTask = (task) => {
             MainService.postTodo(task);
         };
         vm.toggleForm = () => {
-            MainService.showForm = !MainService.showForm;
-            console.log("test");
+            vm.showForm = !vm.showForm;
+            $rootScope.$broadcast("toggleForm", vm.showForm);
+           // MainService.toggleForm();
+           // MainService.toggleForm();
         };
 
         vm.addImportance = (value) => {
