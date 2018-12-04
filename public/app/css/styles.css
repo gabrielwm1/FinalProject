@@ -95,8 +95,9 @@ body {
 
 .daily-container, .weekly-container, .todo-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-evenly;
+    align-items: center;
     padding: 4%;
     margin-top: 10px;
     position: relative;
@@ -125,10 +126,13 @@ body {
     text-decoration: line-through;
 }
 
-.fa-times{
-    position:absolute;
-    right: 50px;
+.task-name{
+    border: none;
+    background-color: #EFF3F4;
+    font-size: 18px;
+    padding: 0px;
 }
+
 
 /*Form Styling*/
 
