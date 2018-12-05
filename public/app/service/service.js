@@ -1,7 +1,21 @@
 "use strict";
-function MainService($http, $location) {
+function MainService($rootScope, $http, $location) {
     const self = this;
-//currencty
+    self.showForm = true;
+
+    self.setValue = (data) => {
+       self.showForm = data;
+    };
+
+    self.getDisplayValue =() =>{
+        return self.showForm;
+    }
+    
+
+
+
+
+    //currencty
 
     self.currency = 0;
 
@@ -9,8 +23,6 @@ function MainService($http, $location) {
     self.getNumber = () => {
 
         return self.currency;
-
-
     }
 
     //updates the value of our currency based on completed tasks
@@ -124,6 +136,7 @@ function MainService($http, $location) {
         return self.inventory;
     }
 }
+
 
 angular
     .module("App")
