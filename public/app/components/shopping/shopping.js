@@ -21,7 +21,7 @@ const shopping ={
             
             // MainService.inventory[id].bought = !MainService.inventory[id].bought;
            
-            MainService.inventory[id].bought === false;
+            MainService.inventory[id].bought = true;
             vm.getCart();
             console.log("clicked")
         }

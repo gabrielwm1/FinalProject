@@ -1,29 +1,15 @@
-
-<section class="coin-container">
-        <p class="currency">{{$ctrl.currency}}</p>
-        <!-- Will call currency here -->
-        <img class="coin" src="app/images/coin.svg" alt="coin image">
-</section>
-<section class="shopping">
-    <section class="item1"></section>
-    <section class="item2"></section>
-    <section class="item3"></section>
-    <section class="item4"></section>
-    <section class="item5"></section>
-</section>
-
 <section class="toy-container">
     <section class="coin-container">
-            <p class="currency">5</p>
+            <p class="currency">{{$ctrl.currency}}</p>
             <!-- Will call currency here -->
             <img class="coin" src="app/images/coin.svg" alt="coin image">
     </section>
     <section class="shopping">
         <section class="item1" ng-click="$ctrl.buyItems(0)"> 1 </section>
-        <section class="item2" ng-click="$ctrl.getCart()"> 2 </section>
-        <section class="item3" ng-click="$ctrl.getCart()"> 3 </section>
-        <section class="item4" ng-click="$ctrl.getCart()"> 4 </section>
-        <section class="item5" ng-click="$ctrl.getCart()"> 5 </section>
+        <section class="item2" ng-click="$ctrl.buyItems(1)"> 2 </section>
+        <section class="item3" ng-click="$ctrl.buyItems(2)"> 3 </section>
+        <section class="item4" ng-click="$ctrl.buyItems(3)"> 4 </section>
+        <section class="item5" ng-click="$ctrl.buyItems(4)"> 5 </section>
     </section>
     <section class="toys">
         <section class="toy1" ng-hide="$ctrl.inventory[0].bought === false"> 1 </section>
