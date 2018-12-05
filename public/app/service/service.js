@@ -84,40 +84,40 @@ function MainService($http, $location) {
     self.inventory = [
         {
             id: 0,
-            item: "Ball",
+            item: "Teddy Bear",
             price: 3,
             bought: false,
+            image: "./app/images/teddybear.png"
         },
         {
             id: 1,
-            item: "Frisbee",
+            item: "Treat",
             price: 2,
             bought: false,
+            image: "./app/images/treat.png"
         },
         {
             id: 2,
-            item: "Bone",
+            item: "Ball",
             price: 8,
             bought: false,
+            image:"./app/images/ball.png"
         },
         {
             id: 3,
-            item: "Stuffed Dog",
+            item: "Bowl",
             price: 4,
             bought: false,
+            image: "./app/images/dogbowl.png"
         },
         {
             id: 4,
-            item: "Stick",
+            item: "Toy",
             price: 20,
             bought: false,
+            image: "./app/images/toy.png"
         },
-        {
-            id: 5,
-            item: "Treat",
-            price: 1,
-            bought: false,
-        },
+        
     ];
 
     self.getCart = () => {

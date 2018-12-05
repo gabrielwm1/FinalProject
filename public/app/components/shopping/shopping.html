@@ -5,18 +5,38 @@
             <img class="coin" src="app/images/coin.svg" alt="coin image">
     </section>
     <section class="shopping">
-        <section class="item1" ng-click="$ctrl.buyItems(0)"> 1 </section>
-        <section class="item2" ng-click="$ctrl.buyItems(1)"> 2 </section>
-        <section class="item3" ng-click="$ctrl.buyItems(2)"> 3 </section>
-        <section class="item4" ng-click="$ctrl.buyItems(3)"> 4 </section>
-        <section class="item5" ng-click="$ctrl.buyItems(4)"> 5 </section>
+        <section class="item1" ng-click="$ctrl.buyItems(0)">
+            <img class="teddybear" ng-src="{{$ctrl.inventory[0].image}}" alt="teddybear">
+        </section>
+        <section class="item2" ng-click="$ctrl.buyItems(1)">
+            <img class="treat" ng-src="{{$ctrl.inventory[1].image}}" alt="treat">
+        </section>
+        <section class="item3" ng-click="$ctrl.buyItems(2)">
+            <img class="treat" ng-src="{{$ctrl.inventory[2].image}}" alt="treat">
+        </section>
+        <section class="item4" ng-click="$ctrl.buyItems(3)">
+            <img class="treat" ng-src="{{$ctrl.inventory[3].image}}" alt="treat">
+        </section>
+        <section class="item5" ng-click="$ctrl.buyItems(4)">
+            <img class="treat" ng-src="{{$ctrl.inventory[4].image}}" alt="treat">
+        </section>
     </section>
     <section class="toys">
-        <section class="toy1" ng-hide="$ctrl.inventory[0].bought === false"> 1 </section>
-        <section class="toy2" ng-hide="$ctrl.inventory[1].bought === false"> 2 </section>
-        <section class="toy3" ng-hide="$ctrl.inventory[2].bought === false"> 3 </section>
-        <section class="toy4" ng-hide="$ctrl.inventory[3].bought === false"> 4 </section>
-        <section class="toy5" ng-hide="$ctrl.inventory[4].bought === false"> 5 </section>
+        <section class="toy1" ng-hide="$ctrl.inventory[0].bought === false"> 
+            <img class="teddybear" ng-src="{{$ctrl.inventory[0].image}}" alt="teddybear">
+         </section>
+        <section class="toy2" ng-hide="$ctrl.inventory[1].bought === false">
+            <img class="treat" ng-src="{{$ctrl.inventory[1].image}}" alt="treat">
+        </section>
+        <section class="toy3" ng-hide="$ctrl.inventory[2].bought === false">
+            <img class="treat" ng-src="{{$ctrl.inventory[2].image}}" alt="treat">
+        </section>
+        <section class="toy4" ng-hide="$ctrl.inventory[3].bought === false">
+            <img class="treat" ng-src="{{$ctrl.inventory[3].image}}" alt="treat">
+        </section>
+        <section class="toy5" ng-hide="$ctrl.inventory[4].bought === false">
+            <img class="treat" ng-src="{{$ctrl.inventory[4].image}}" alt="treat">
+        </section>
     </section>
 </section>
 
