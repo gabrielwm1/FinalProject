@@ -1,34 +1,32 @@
 "use strict";
 function MainService($http, $location) {
     const self = this;
-//currencty
 
+    // currency
     self.currency = 0;
 
-//return our currency to date
+    //return our currency to date
     self.getNumber = () => {
-
         return self.currency;
-
-
     }
 
     //updates the value of our currency based on completed tasks
-
     self.updateCurrency = (value) => {
         if (value === true) {
             self.currency++;
-        }
-        else if (value === false){
-        
+        } else if (value === false) {
             self.currency--;
-        }
-        else{
+        } else {
             console.log("error");
         }
-
     }
-    
+
+    // updates currency after buying items
+    self.buyItems = (value) => {
+        self.currency -= value;
+        console.log(self.currency);
+        
+    }
 
     // all get requests
     self.getDaily = () => {
@@ -109,7 +107,7 @@ function MainService($http, $location) {
         {
             id: 4,
             item: "Stick",
-            price: 20,
+            price: 1,
             bought: false,
         },
         {
