@@ -1,12 +1,12 @@
 "use strict";
 const navbar = {
     templateUrl: "app/components/nav/nav.html",
-    controller: ["$rootScope","MainService",function($rootScope, MainService){
+    controller: ["$rootScope","MainService", function($rootScope, MainService){
         const vm = this;
 
         // broadcast to toggle form boolean
         vm.showForm = () => {
-            $rootScope.$broadcast("hideForm", true);
+            $rootScope.$broadcast("showForm", true);
             MainService.loadList();
         };
         vm.hideForm = () => {

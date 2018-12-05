@@ -1,7 +1,16 @@
 "use strict";
-function MainService($http, $location) {
+function MainService($rootScope, $http, $location) {
     const self = this;
+    self.showForm = true;
 
+    self.setValue = (data) => {
+       self.showForm = data;
+    };
+
+    self.getDisplayValue =() =>{
+        return self.showForm;
+    }
+ 
     // currency
     self.currency = 0;
 
@@ -122,6 +131,7 @@ function MainService($http, $location) {
         return self.inventory;
     }
 }
+
 
 angular
     .module("App")

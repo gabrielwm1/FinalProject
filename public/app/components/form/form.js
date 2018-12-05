@@ -5,7 +5,9 @@ const submit = {
         
         const vm = this;
         // sends value of false to boardcast
+        vm.showForm = true;
         vm.hideForm = () => {            
+            vm.showForm = false;
             $rootScope.$broadcast("hideForm", false);
         }
 
