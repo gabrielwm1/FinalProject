@@ -1,6 +1,36 @@
 "use strict";
 function MainService($http, $location) {
     const self = this;
+//currencty
+
+    self.currency = 0;
+
+//return our currency to date
+    self.getNumber = () => {
+
+        return self.currency;
+
+
+    }
+
+    //updates the value of our currency based on completed tasks
+
+    self.updateCurrency = (value) => {
+        if (value === true) {
+            self.currency++;
+            console.log(self.currency);
+        }
+        else if (value === false){
+        
+            self.currency--;
+            console.log(self.currency);
+        }
+        else{
+            console.log("error");
+        }
+
+    }
+    
 
     // all get requests
     self.getDaily = () => {
