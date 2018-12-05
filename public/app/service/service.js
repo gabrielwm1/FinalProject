@@ -53,7 +53,7 @@ function MainService($http, $location) {
         $location.path("/todolist");
     };
 
-    const inventory = [
+    self.inventory = [
         {
             id: 0,
             item: "Ball",
@@ -91,6 +91,10 @@ function MainService($http, $location) {
             bought: false,
         },
     ];
+
+    self.getCart = () => {
+        return self.inventory;
+    }
 }
 
 angular
