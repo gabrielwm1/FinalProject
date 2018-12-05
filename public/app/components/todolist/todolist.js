@@ -3,12 +3,31 @@ const todolist = {
     templateUrl: "app/components/todolist/todolist.html",
     controller: ["$rootScope", "MainService", function ($rootScope, MainService) {
         const vm = this;
-        
+        var value = true;
+        //now receiving broadcast in the service
+
+        //vm.showForm = MainService.getValue();
+
         // recieves broadcast
-        $rootScope.$on("hideForm", (event, data) => {     
-            console.log(data);       
-            vm.showForm = data;
+
+        vm.getValue = () => {
+            return MainService.getDisplayValue();  
+        }
+
+        $rootScope.$on("showForm", (event,data) => {
+            console.log(data);
+            MainService.setValue(data);
+            value = data;
         });
+
+        $rootScope.$on("hideForm", (event, data) => {     
+            console.log(data);  
+            MainService.setValue(data);     
+            value = data;
+        });
+
+        console.log(value);
+       
 
         // updates tasks from promise
         function updateDaily(result) {
@@ -33,7 +52,7 @@ const todolist = {
         vm.completedTask = (task) => {
             if (task.completed === true) {
                 task.completed = false
-                
+
             } else {
                 task.completed = true
             }
