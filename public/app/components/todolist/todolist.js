@@ -33,13 +33,16 @@ const todolist = {
         vm.completedTask = (task) => {
             if (task.completed === true) {
                 task.completed = false
+                
             } else {
                 task.completed = true
             }
+
             // sends to service
             MainService.put(task).then((result) => {
                 vm.getAll();
             });
+            MainService.updateCurrency(task.completed);
         };
 
         // updates edited task

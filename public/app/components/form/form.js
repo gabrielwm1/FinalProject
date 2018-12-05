@@ -2,6 +2,7 @@
 const submit = {
     templateUrl: "app/components/form/form.html",
     controller: ["$rootScope", "MainService", function($rootScope, MainService){
+        
         const vm = this;
         // sends value of false to boardcast
         vm.hideForm = () => {            
