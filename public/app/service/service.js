@@ -2,9 +2,7 @@
 function MainService($http, $location) {
     const self = this;
 
-    
-
-    //currencty
+    // currency
     self.currency = 0;
 
     //return our currency to date
