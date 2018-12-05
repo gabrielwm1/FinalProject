@@ -74,20 +74,20 @@ body {
 
 .main-container {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     width: 100vw;
     height: 100vh;
     background-color:  #c7e5f2;
-    position: relative;
 }
 
 .box {
+    height: auto;
     max-height: 80vh;
     padding: 2%;
     margin: 20px 10px;
     border-radius: 15px;
-    box-shadow: 2px 2px 0px 0px grey;
+    box-shadow: 2px 2px 5px 1px rgb(87, 133, 151);
     background-color: #EFF3F4;
 }
 
