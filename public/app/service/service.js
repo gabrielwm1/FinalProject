@@ -1,17 +1,9 @@
 "use strict";
 function MainService($http, $location){
     const self = this;
-    //  let showForm = false;
+   
 
-    // self.toggleForm = () =>{
-        
-    //     console.log("is this working");
-    //     console.log(showForm);
-    //     // showForm = !showForm;
-    //     // //return showForm;
-    //     // console.log(showForm);
-    // }
-
+    
     self.getDaily = () => {
         return $http({
             url:"/tasks/daily",
