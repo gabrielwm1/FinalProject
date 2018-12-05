@@ -760,3 +760,47 @@ input {
     text-align: center;
     margin: 1px 0px;
 }
+.toy-container {
+    position: relative;
+}
+
+.toy1 {
+    position: fixed;
+    left: 35%;
+    bottom: 20%;
+    height: 50px;
+    width: 50px;
+    z-index: 5;
+}
+.toy2 {
+    position: fixed;
+    left: 45%;
+    bottom: 15%;
+    height: 50px;
+    width: 50px;
+    z-index: 5;
+}
+.toy3 {
+    position: fixed;
+    left: 55%;
+    bottom: 25%;
+    height: 50px;
+    width: 50px;
+    z-index: 5;
+}
+.toy4 {
+    position: fixed;
+    left: 60%;
+    bottom: 23%;
+    height: 50px;
+    width: 50px;
+    z-index: 5;
+}
+.toy5 {
+    position: fixed;
+    left: 49%;
+    bottom: 28%;
+    height: 50px;
+    width: 50px;
+    z-index: 5;
+}
