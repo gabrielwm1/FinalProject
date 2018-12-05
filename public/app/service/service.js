@@ -21,6 +21,13 @@ function MainService($http, $location) {
         }
     }
 
+    // updates currency after buying items
+    self.buyItems = (value) => {
+        self.currency -= value;
+        console.log(self.currency);
+        
+    }
+
     // all get requests
     self.getDaily = () => {
         return $http({
@@ -100,7 +107,7 @@ function MainService($http, $location) {
         {
             id: 4,
             item: "Stick",
-            price: 20,
+            price: 1,
             bought: false,
         },
         {

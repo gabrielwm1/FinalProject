@@ -4,11 +4,11 @@ const todolist = {
     controller: ["$rootScope", "MainService", function ($rootScope, MainService) {
         const vm = this;
         
-        // // recieves broadcast
-        // $rootScope.$on("hideForm", (event, data) => {     
-        //     console.log(data);       
-        //     vm.showForm = data;
-        // });
+        // recieves broadcast
+        $rootScope.$on("hideForm", (event, data) => {     
+            console.log(data);       
+            vm.showForm = data;
+        });
 
         // updates tasks from promise
         function updateDaily(result) {
