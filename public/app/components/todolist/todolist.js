@@ -52,7 +52,7 @@ const todolist = {
         vm.completedTask = (task) => {
             if (task.completed === true) {
                 task.completed = false
-                
+
             } else {
                 task.completed = true
             }
