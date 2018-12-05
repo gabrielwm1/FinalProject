@@ -667,3 +667,44 @@ input {
         transform: rotate(40deg);
     }
 }
+
+
+/* Shopping component */
+.shopping{
+    height: 575px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 15px;
+    position: fixed;
+    top: 60%;
+    right: 10px;
+    transform: translateY(-50%);
+    box-shadow: 2px 2px 5px 1px rgb(87, 133, 151);
+}
+
+.item1{
+    background-color: #EFF3F4;
+    height: 150px;
+    width: 150px;
+    border-radius: 15px 15px 0 0;
+    text-align: center;
+    margin: 1px 0px;
+}
+
+.item5{
+    background-color: #EFF3F4;
+    height: 150px;
+    width: 150px;
+    border-radius: 0 0 15px 15px;
+    text-align: center;
+}
+.item2, .item3, .item4{
+    background-color: #EFF3F4;
+    height: 150px;
+    width: 150px;
+    border-radius: none;
+    text-align: center;
+    margin: 1px 0px;
+}

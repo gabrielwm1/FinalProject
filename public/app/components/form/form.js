@@ -13,15 +13,6 @@ const submit = {
             $rootScope.$broadcast("hideForm", vm.showForm);
 
         }
-        // vm.toggleForm = () => {
-        //     if (vm.showForm === false ) {
-        //         vm.showForm = true;
-        //         $rootScope.$broadcast("toggleForm", vm.showForm);
-        //     } else {
-        //         vm.showForm = false;
-                
-        //     };
-        // };
 
         vm.addImportance = (value) => {
            if (value === 1){
