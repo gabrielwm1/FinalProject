@@ -18,12 +18,10 @@ function MainService($http, $location) {
     self.updateCurrency = (value) => {
         if (value === true) {
             self.currency++;
-            console.log(self.currency);
         }
         else if (value === false){
         
             self.currency--;
-            console.log(self.currency);
         }
         else{
             console.log("error");
