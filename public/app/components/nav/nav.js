@@ -3,36 +3,16 @@ const navbar = {
     templateUrl: "app/components/nav/nav.html",
     controller: ["$rootScope","MainService",function($rootScope, MainService){
         const vm = this;
-        vm.showForm = true;
-        vm.toggleForm = () => {
-            vm.showForm = false ;
-            $rootScope.$broadcast("toggleForm", vm.showForm);
-            console.log(data);
-           // MainService.toggleForm();
-           // MainService.toggleForm();
-        };
 
-        // vm.hideForm = () => {
-        //     vm.showForm = !vm.showForm;
-        //     $rootScope.$broadcast("toggleForm", vm.showForm);
-        //    // MainService.toggleForm();
-        //    // MainService.toggleForm();
-        // };
-
-        // $rootScope.$on("toggleForm", (event, data) => {
-        //     vm.showForm = data;
-        // });
-
-        vm.loadEdit = () => {
-            MainService.loadEdit();
-        }
-
-        vm.loadList = () =>{
+        // broadcast to toggle form boolean
+        vm.showForm = () => {
+            $rootScope.$broadcast("hideForm", true);
             MainService.loadList();
-        }
-
-
-
+        };
+        vm.hideForm = () => {
+            $rootScope.$broadcast("hideForm", false);
+            MainService.loadList();
+        };
     }]
 }
 

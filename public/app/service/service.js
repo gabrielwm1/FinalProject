@@ -1,78 +1,59 @@
 "use strict";
-function MainService($http, $location){
+function MainService($http, $location) {
     const self = this;
-    //  let showForm = false;
 
-    // self.toggleForm = () =>{
-        
-    //     console.log("is this working");
-    //     console.log(showForm);
-    //     // showForm = !showForm;
-    //     // //return showForm;
-    //     // console.log(showForm);
-    // }
-
+    // all get requests
     self.getDaily = () => {
         return $http({
-            url:"/tasks/daily",
+            url: "/tasks/daily",
             method: "GET",
         });
     };
-
     self.getWeekly = () => {
         return $http({
-            url:"/tasks/weekly",
+            url: "/tasks/weekly",
             method: "GET",
         });
     };
- 
     self.getTodo = () => {
         return $http({
-            url:"/tasks/todo",
+            url: "/tasks/todo",
             method: "GET",
         });
     };
 
+    // new todo post
     self.postTodo = (newTask) => {
         return $http({
-            url:"/tasks",
-            method:"POST",
+            url: "/tasks",
+            method: "POST",
             data: newTask
         });
     };
 
+    // deletes by id
     self.delete = (id) => {
         return $http({
-            url:`/tasks/${id}`,
-            method:"DELETE",
+            url: `/tasks/${id}`,
+            method: "DELETE",
         });
     };
 
+    // edits by id
     self.put = (updatedTask) => {
         return $http({
-            url:`/tasks/${updatedTask.id}`,
-            method:"PUT",
+            url: `/tasks/${updatedTask.id}`,
+            method: "PUT",
             data: updatedTask
         });
     };
 
-    self.loadEdit = () => {
-        $location.path("/todolist");
-      };
-
+    // routes to page
     self.loadList = () => {
-      $location.path("/todolist");
-     };
-
-
-    
-
+        $location.path("/todolist");
+    };
 }
 
-
-
-
-
-angular 
+angular
     .module("App")
     .service("MainService", MainService);

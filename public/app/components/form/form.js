@@ -3,43 +3,30 @@ const submit = {
     templateUrl: "app/components/form/form.html",
     controller: ["$rootScope", "MainService", function($rootScope, MainService){
         const vm = this;
-        vm.showForm = true;
+        // sends value of false to boardcast
+        vm.hideForm = () => {            
+            $rootScope.$broadcast("hideForm", false);
+        }
 
+        // saves new in service
         vm.saveTask = (task) => {
             MainService.postTodo(task);
         };
-        vm.hideForm = () => {
-            vm.showForm = false;
-            $rootScope.$broadcast("hideForm", vm.showForm);
 
-        }
-        vm.toggleForm = () => {
-            if (vm.showForm === false ) {
-                vm.showForm = true;
-                $rootScope.$broadcast("toggleForm", vm.showForm);
-            } else {
-                vm.showForm = false;
-                
-            };
-        };
-
+        // sets importance for obj
         vm.addImportance = (value) => {
            if (value === 1){
                vm.newTask.importance = 1;
-               
-           }
-           else if (value === 2){
+           } else if (value === 2){
                vm.newTask.importance = 2;
-           }
-           else if (value === 3){
+           } else if (value === 3){
                vm.newTask.importance = 3;
-           }
-           else {
+           } else {
                vm.newTask.importance = 0; 
-           }
-           console.log(value);
+           };
         }
 
+        // sets frequency obj
         vm.addFrequency = (value) =>{
             if (value === "daily"){
                 vm.newTask.daily = true;
@@ -49,17 +36,7 @@ const submit = {
             }
             else {
                 vm.newTask.todo = true;
-            }
-        }
-
-        vm.medImportance = () => {
-            vm.medImportance = !vm.medImportance;
-        }
-        vm.flipHigh = () => {
-            vm.highImportance = !vm.highImportance;
-        }
-        vm.flipLow = () => {
-            vm.lowImportance = !vm.lowImportance;
+            };
         }
     }]
 }
