@@ -3,40 +3,34 @@ const home = {
     templateUrl:"app/components/home/home.html",
     controller:["MainService", function(MainService){
         const vm = this;
-        vm.taskNumber;
-        vm.compTaskNumber;
-        vm.mood;
+        
         //MainService.getTasks();
+        
+        //getter function, gets all tasks, and then stores the number of tasks inside our service
         vm.getTasks = () =>{
             MainService.getTasks().then((result) => {
-                vm.taskNumber = result.data.length;
-               // console.log(result.data.length);
-                return vm.taskNumber;
+                MainService.setAllTasks(result.data.length);
             });
         };
+        //getter function, gets completed tasks and stores the number of completed tasks inside our service
 
         vm.getCompletedTasks = () => {
             MainService.getCompletedTasks().then((result) => {
-                vm.compTaskNumber = result.data.length;
-               // console.log(result.data.length);
-                return vm.compTaskNumber;
+                MainService.setCompTasks(result.data.length);
             })
-
-
         }
-        vm.getMood = () =>{
-            vm.mood = vm.getCompletedTasks()/vm.getTasks();
+        //getter function, retrieves values that are stored in the service, and asks service what our mood is depending on these two values. 
+        vm.getMood = () => {
+            vm.allTasks = MainService.getRealTasks();
+            vm.compTasks = MainService.getRealCompTasks();
+            vm.mood = MainService.setMood(vm.compTasks,vm.allTasks);
             console.log(vm.mood);
-            //console.log(vm.compTaskNumber);
         }
-        
 
-        // vm.getTasks();
-        // vm.getCompletedTasks();
+        vm.getTasks();
+        vm.getCompletedTasks();
         vm.getMood();
-    
-    
-
+        
     }]
 };
 
