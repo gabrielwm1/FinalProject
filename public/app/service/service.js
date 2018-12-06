@@ -1,7 +1,34 @@
 "use strict";
 function MainService($rootScope, $http, $location) {
     const self = this;
+    self.taskNumber =0;;
+    self.compTaskNumber= 0;;
+    self.mood;
+    //these are the functions communicating with home
 
+    self.setAllTasks = (value) =>{
+        self.taskNumber = value;
+
+    }
+    self.setCompTasks = (value) =>{
+        self.compTaskNumber = value;
+        
+    }
+    self.getRealTasks = () =>{
+        return self.taskNumber;
+    }
+
+    self.getRealCompTasks = () =>{
+        return self.compTaskNumber;
+    }
+    self.getMood = (value1, value2) => {
+        self.mood = value1/value2;
+        console.log(self.compTaskNumber);
+        return self.mood;
+    } 
+    
+
+   
     //handles form showing and hidding
     self.showForm = true;
     self.getDisplayValue =() =>{
