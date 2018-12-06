@@ -4,31 +4,35 @@ function MainService($rootScope, $http, $location) {
     self.taskNumber =0;;
     self.compTaskNumber= 0;;
     self.mood;
-    //these are the functions communicating with home
 
+    //these are the functions communicating with home
+    // sets value of  All Tasks
     self.setAllTasks = (value) =>{
         self.taskNumber = value;
 
     }
+
+    //sets number of completed Tasks
     self.setCompTasks = (value) =>{
         self.compTaskNumber = value;
         
     }
+
+    ///returns all tasks to home
     self.getRealTasks = () =>{
         return self.taskNumber;
     }
-
+    //returns completed tasks to home
     self.getRealCompTasks = () =>{
         return self.compTaskNumber;
     }
-    self.getMood = (value1, value2) => {
+    //runs math, returns mood value to home
+    self.setMood = (value1, value2) => {
         self.mood = value1/value2;
         console.log(self.compTaskNumber);
         return self.mood;
     } 
     
-
-   
     //handles form showing and hidding
     self.showForm = true;
     self.getDisplayValue =() =>{
