@@ -412,3 +412,31 @@ input {
 .hide {
     display: none;
 }
+
+
+
+/* media queries */
+/* ipad pro */
+@media only screen and (max-width : 1024px) {
+    .nav-bar {
+        top: 10px;
+        transform: translateY(0%);
+    }
+    .dog {
+        margin-top: 80px;
+    }
+}
+
+/* ipad */
+@media only screen and (max-width : 768px) {
+
+}
+
+/* iphone x */
+@media only screen and (max-width : 375px) {
+    .nav-bar {
+        flex-direction: row;
+        top: 10px;
+        transform: translateY(0%);
+    }
+}
