@@ -1,24 +1,22 @@
 "use strict";
 
-// function domManip() {
-//     return {
-//         restrict: "A",
-//         link: function ($scope, $element, $attrs, $location) {
+function displayDir() {
+    return {
+        restrict: "A",
+        link: function ($scope, $element, $attrs, $location) {
+            console.log($element);
+            $element.on("click", () => {
+                console.log($element);
 
-//             $element.on("click", () => {
+                if ($element[0].classList[0] === "coin-container") {
+                    $element[0].nextSibling.nextElementSibling.classList.toggle("hide");
+                }
 
-//                 if ($element[0].classList[2] === "form-exit") {                    
-//                     $element[0].offsetParent.offsetParent.classList.add("hide");
-//                 }
+            })
+        }
+    };
+}
 
-//                 console.log($element);
-                
-
-//             })
-//         }
-//     };
-// }
-
-// angular
-//     .module("App")
-//     .directive("domManip", domManip);
+angular
+    .module("App")
+    .directive("displayDir", displayDir);

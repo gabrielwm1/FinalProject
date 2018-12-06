@@ -1,8 +1,9 @@
 "use strict";
 function MainService($rootScope, $http, $location) {
     const self = this;
-    self.showForm = true;
 
+    //handles form showing and hidding
+    self.showForm = true;
     self.getDisplayValue =() =>{
         return self.showForm;
     }
@@ -11,16 +12,12 @@ function MainService($rootScope, $http, $location) {
        self.showForm = data;
     };
 
-    
- 
     // currency
     self.currency = 0;
-
     //return our currency to date
     self.getNumber = () => {
         return self.currency;
     }
-
     //updates the value of our currency based on completed tasks
     self.updateCurrency = (value) => {
         if (value === true) {
@@ -31,7 +28,6 @@ function MainService($rootScope, $http, $location) {
             console.log("error");
         }
     }
-
     // updates currency after buying items
     self.buyItems = (value) => {
         if(value >= 0){
