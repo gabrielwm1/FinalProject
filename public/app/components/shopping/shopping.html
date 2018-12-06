@@ -1,30 +1,21 @@
 <section class="toy-container">
-    <section class="coin-container">
-            <p class="currency">{{$ctrl.currency}}</p>
-            <!-- Will call currency here -->
-            <img class="coin" src="app/images/coin.svg" alt="coin image">
+    <section display-dir class="coin-container">
+        <p class="currency">{{$ctrl.currency}}</p>
+        <!-- Will call currency here -->
+        <img class="coin" src="app/images/coin.svg" alt="coin image">
     </section>
-    <section class="shopping">
-        <section class="item1" ng-click="$ctrl.buyItems(0, $ctrl.inventory[0])">
-            <img class="teddybear" ng-src="{{$ctrl.inventory[0].image}}" alt="teddybear">
-        </section>
-        <section class="item2" ng-click="$ctrl.buyItems(1, $ctrl.inventory[1])">
-            <img class="treat" ng-src="{{$ctrl.inventory[1].image}}" alt="treat">
-        </section>
-        <section class="item3" ng-click="$ctrl.buyItems(2, $ctrl.inventory[2])">
-            <img class="treat" ng-src="{{$ctrl.inventory[2].image}}" alt="treat">
-        </section>
-        <section class="item4" ng-click="$ctrl.buyItems(3, $ctrl.inventory[3])">
-            <img class="treat" ng-src="{{$ctrl.inventory[3].image}}" alt="treat">
-        </section>
-        <section class="item5" ng-click="$ctrl.buyItems(4, $ctrl.inventory[4])">
-            <img class="treat" ng-src="{{$ctrl.inventory[4].image}}" alt="treat">
+    <section class="inventory-container dir-hide">
+        <section class="inventory-item" ng-repeat="item in $ctrl.inventory">
+            <section class="items" ng-click="$ctrl.buyItems(item.id, item)">
+                <p>Price: {{item.price}}</p>
+                <img class="inventory-img" ng-src="{{item.image}}">
+            </section>
         </section>
     </section>
     <section class="toys">
-        <section class="toy1" ng-hide="$ctrl.inventory[0].bought === false"> 
+        <section class="toy1" ng-hide="$ctrl.inventory[0].bought === false">
             <img class="teddybear" ng-src="{{$ctrl.inventory[0].image}}" alt="teddybear">
-         </section>
+        </section>
         <section class="toy2" ng-hide="$ctrl.inventory[1].bought === false">
             <img class="treat" ng-src="{{$ctrl.inventory[1].image}}" alt="treat">
         </section>
@@ -39,4 +30,3 @@
         </section>
     </section>
 </section>
-

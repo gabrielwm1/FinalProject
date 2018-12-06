@@ -9,10 +9,6 @@ body {
     z-index: 9999;
 }
 
-.hide {
-    display: none;
-}
-
 /* navigation styling */
 
 .nav-bar {
@@ -340,46 +336,35 @@ input {
 }
 
 /* Shopping component */
-.shopping{
-    height: 575px;
+.inventory-container {
+    overflow: scroll;
     width: 150px;
+    max-height: calc(100vh - 180px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     border-radius: 15px;
     position: fixed;
-    top: 60%;
+    top: 170px;
     right: 10px;
-    transform: translateY(-50%);
-    box-shadow: 2px 2px 5px 1px rgb(87, 133, 151);
 }
 
-.item1{
-    background-color: #EFF3F4;
-    height: 150px;
+.inventory-item {
     width: 150px;
-    border-radius: 15px 15px 0 0;
-    text-align: center;
-    margin: 1px 0px;
+    height: 150px;
 }
 
-.item5{
+.inventory-img {
+    max-width: auto;
+    max-height: 80%;
+    margin: 0 auto;
+}
+
+.items {
     background-color: #EFF3F4;
     height: 150px;
     width: 150px;
-    border-radius: 0 0 15px 15px;
     text-align: center;
-}
-.item2, .item3, .item4{
-    background-color: #EFF3F4;
-    height: 150px;
-    width: 150px;
-    border-radius: none;
-    text-align: center;
-    margin: 1px 0px;
-}
-.toy-container {
-    position: relative;
 }
 
 .toy1 {
@@ -421,4 +406,10 @@ input {
     height: 50px;
     width: 50px;
     z-index: 5;
+}
+
+
+/* ONLY FOR HIDING KEEP AT BOTTOM */
+.hide {
+    display: none;
 }
