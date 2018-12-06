@@ -96,6 +96,13 @@ body {
     margin-top: 10px;
     position: relative;
 }
+.fa-arrow-left {
+    font-size: 40px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    color: #062733;
+}
 
 .hide-complete{
     background-color: #659EBE;
@@ -426,6 +433,8 @@ input {
     .dog {
         margin-top: 60px;
     }
+    /* to do page */
+    
 }
 
 /* ipad */
@@ -493,3 +502,4 @@ input {
     }
 
 }
+
