@@ -9,14 +9,11 @@ const navbar = {
             // $rootScope.$broadcast("showForm", true);
             MainService.setValue(true);
             MainService.loadList();
-            console.log("hell yeah");
         };
         vm.hideForm = () => {
             //$rootScope.$broadcast("hideForm", false);
             MainService.setValue(false);
             MainService.loadList();
-
-            console.log("working");
         };
     }]
 }
