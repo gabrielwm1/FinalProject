@@ -14,19 +14,21 @@ const todolist = {
             return MainService.getDisplayValue();  
         }
 
-        $rootScope.$on("showForm", (event,data) => {
-            console.log(data);
-            MainService.setValue(data);
-            value = data;
-        });
+        // $rootScope.$on("showForm", (event,data) => {
+            
+        //     MainService.setValue(data);
+        //     // value = data;
+        //     // console.log(value);
+        // });
 
-        $rootScope.$on("hideForm", (event, data) => {     
-            console.log(data);  
-            MainService.setValue(data);     
-            value = data;
-        });
+        // $rootScope.$on("hideForm", (event, data) => {     
+        //     console.log("this is working");
+        //     MainService.setValue(data);     
+        //     // value = data;
+        //      console.log(data);
+        // });
 
-        console.log(value);
+        //console.log(value);
        
 
         // updates tasks from promise

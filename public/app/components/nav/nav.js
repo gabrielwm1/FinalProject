@@ -6,12 +6,17 @@ const navbar = {
 
         // broadcast to toggle form boolean
         vm.showForm = () => {
-            $rootScope.$broadcast("showForm", true);
+            // $rootScope.$broadcast("showForm", true);
+            MainService.setValue(true);
             MainService.loadList();
+            console.log("hell yeah");
         };
         vm.hideForm = () => {
-            $rootScope.$broadcast("hideForm", false);
+            //$rootScope.$broadcast("hideForm", false);
+            MainService.setValue(false);
             MainService.loadList();
+
+            console.log("working");
         };
     }]
 }
