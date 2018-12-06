@@ -4,7 +4,7 @@
         <!-- Will call currency here -->
         <img class="coin" src="app/images/coin.svg" alt="coin image">
     </section>
-    <section class="inventory-container hide">
+    <section class="inventory-container dir-hide">
         <section class="inventory-item" ng-repeat="item in $ctrl.inventory">
             <section class="items" ng-click="$ctrl.buyItems(item.id, item)">
                 <p>Price: {{item.price}}</p>

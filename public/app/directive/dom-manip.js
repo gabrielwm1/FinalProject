@@ -8,10 +8,15 @@ function displayDir() {
             $element.on("click", () => {
                 console.log($element);
 
-                if ($element[0].classList[0] === "coin-container") {
-                    $element[0].nextSibling.nextElementSibling.classList.toggle("hide");
-                }
+                // if ($element[0].classList[0] === "coin-container") {
+                //     $element[0].nextSibling.nextElementSibling.classList.toggle("dir-hide");
+                // }
 
+
+                if ($element[0].classList[0] === "coin-container") {
+                    $element[0].nextSibling.nextElementSibling.classList.toggle("dir-show");
+                    $element[0].nextSibling.nextElementSibling.classList.toggle("dir-hide");
+                }
             })
         }
     };

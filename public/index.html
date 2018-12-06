@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="app/css/toys.css">
     <link rel="stylesheet" href="app/css/styles.css">
     <link rel="stylesheet" href="app/css/dog.css">
+    <link rel="stylesheet" href="app/css/transitions.css">
 </head>
 
 <body>
@@ -24,10 +25,11 @@
         <a href="#!/submit">Form</a>
     </section> -->
 
-    <ng-view></ng-view>
+    <ng-view class="fade"></ng-view>
 
     <script src="https://code.angularjs.org/1.6.5/angular.js"></script>
     <script src="https://code.angularjs.org/1.6.5/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.js"></script>
     <script src="app/module/module.js"></script>
     <script src="app/service/service.js"></script>
     <script src="app/components/todolist/todolist.js"></script>

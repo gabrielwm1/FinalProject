@@ -1,5 +1,5 @@
 angular
-    .module("App", ["ngRoute"])
+    .module("App", ["ngRoute", "ngAnimate"])
     
     .config(["$routeProvider", ($routeProvider) => {
         $routeProvider
