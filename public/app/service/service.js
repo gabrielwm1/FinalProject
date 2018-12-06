@@ -40,6 +40,22 @@ function MainService($rootScope, $http, $location) {
     }
 
     // all get requests
+    self.getTasks = () => {
+        return $http({
+            url: "/tasks",
+            method: "GET",
+        })
+    };
+
+    //get all completed
+    self.getCompletedTasks = () => {
+        return $http({
+            url: "/tasks/completed",
+            method: "GET",
+        })
+    }
+
+
     self.getDaily = () => {
         return $http({
             url: "/tasks/daily",
