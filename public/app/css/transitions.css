@@ -11,6 +11,7 @@
 .dir-show {    
     box-shadow: 2px 2px 5px 1px rgb(87, 133, 151); 
     max-height: calc(100vh - 180px);
+    overflow: scroll;
 }    
 
 /* page transition */

@@ -337,7 +337,6 @@ input {
 
 /* Shopping component */
 .inventory-container {
-    overflow: scroll;
     width: 150px;
     max-height: calc(100vh - 180px);
     display: flex;
