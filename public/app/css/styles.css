@@ -96,6 +96,13 @@ body {
     margin-top: 10px;
     position: relative;
 }
+.fa-arrow-left {
+    font-size: 40px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    color: #062733;
+}
 
 .hide-complete{
     background-color: #659EBE;
@@ -418,25 +425,81 @@ input {
 /* media queries */
 /* ipad pro */
 @media only screen and (max-width : 1024px) {
+   /* home */
     .nav-bar {
         top: 10px;
         transform: translateY(0%);
     }
     .dog {
-        margin-top: 80px;
+        margin-top: 60px;
     }
+    /* to do page */
+    
 }
 
 /* ipad */
 @media only screen and (max-width : 768px) {
-
+    .dog {
+        margin-top: 20px;
+    }
 }
 
-/* iphone x */
-@media only screen and (max-width : 375px) {
+/* iphone plus */
+@media only screen and (max-width : 414px) {
     .nav-bar {
+        width: 202px;
+        height: 100px;
         flex-direction: row;
         top: 10px;
         transform: translateY(0%);
     }
+    .nav-form, .nav-todo, .coin-container {
+        height: 100px;
+        width: 100px;    
+    }
+    .nav-form {
+        border-radius: 15px 0 0 15px;
+    }
+
+    .nav-todo {
+        border-radius: 0 15px 15px 0;
+    }
+
+    .fa-plus, .fa-th-list{
+        margin: 20px;
+        font-size: 60px;
+    }
+
+    .currency {
+        left: 45%;
+        padding: 8px;
+        border-radius: 100%;
+        background-color: #E0BC63;
+    }
+
+    .inventory-container.inventory-container {
+        width: 100px;
+        max-height: calc(100vh - 130px);
+        top: 120px;
+        right: 10px;
+        background-color: #EFF3F4;
+    }
+
+    .items {
+        width: 100px;
+        height: 100px;
+    }
 }
+
+/* iphone x */
+@media only screen and (max-width : 320px) {
+    .coin-container {
+        right: 5px;
+    }
+
+    .nav-bar {
+        left: 5px;
+    }
+
+}
+
