@@ -3,13 +3,15 @@ function MainService($rootScope, $http, $location) {
     const self = this;
     self.showForm = true;
 
-    self.setValue = (data) => {
-       self.showForm = data;
-    };
-
     self.getDisplayValue =() =>{
         return self.showForm;
     }
+    self.setValue = (data) => {
+       console.log(data);
+       self.showForm = data;
+    };
+
+    
  
     // currency
     self.currency = 0;
