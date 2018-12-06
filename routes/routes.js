@@ -12,6 +12,20 @@ function getTasks(req,res){
     });
 }
 
+//get all taskts
+routes.get("/tasks", (req, res) => {
+    pool.query("SELECT * FROM todo").then((result) => {
+        res.json(result.rows);
+    })
+});
+//get all completed tasks
+routes.get("/tasks/completed", (req, res) => {
+    pool.query("SELECT * FROM todo WHERE completed = true").then((result) => {
+        res.json(result.rows);
+    })
+})
+
+
 //gets daily tasks
 routes.get("/tasks/daily", (req, res) => {
     pool.query("SELECT * FROM todo WHERE daily = true ORDER BY importance DESC, id").then((result) => {
