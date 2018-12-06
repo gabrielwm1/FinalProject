@@ -32,7 +32,9 @@ function MainService($rootScope, $http, $location) {
 
     // updates currency after buying items
     self.buyItems = (value) => {
-        self.currency -= value;
+        if(value >= 0){
+            self.currency -= value;
+        };
         console.log(self.currency);
         
     }
