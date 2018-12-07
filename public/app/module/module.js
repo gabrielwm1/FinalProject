@@ -7,7 +7,12 @@ angular
             template: "<home></home>"
         })
         .when("/todolist", {
-            template: "<todolist></todolist>"
+            template: "<todolist></todolist>",
+            resolve: {
+                message: function(getMoodData){
+                    return messageService.getMoodData();
+            }
+        }
         })
         .when("/submit", {
             template: "<submit></submit>"

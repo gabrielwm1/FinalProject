@@ -10,6 +10,11 @@ function MainService($rootScope, $http, $location) {
     self.setValue = (data) => {
        self.showForm = data;
     };
+    // return{
+    //     getMessage: function(){
+    //         return $q.when("Hellow world!")
+    //     }
+    // } 
 
     // currency
     self.currency = 0;
