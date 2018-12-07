@@ -1,7 +1,13 @@
 <div class="dog">
-    <!-- <section class="speech-bubble">
-        <p class="speech-text">test</p>
-    </section> -->
+    <section class="speech-bubble" ng-show="$ctrl.mood >= .5">
+        <p class="speech-text">Pet me!</p>
+    </section>
+    <section class="speech-bubble hide">
+        <p class="speech-text">Sorry, not enough money...</p>
+    </section>
+    <section class="speech-bubble" ng-show="$ctrl.mood <= .5">
+        <p class="speech-text">Let's complete tasks...</p>
+    </section>
 
     <div class="ears"></div>
 

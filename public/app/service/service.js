@@ -21,7 +21,7 @@ function MainService($rootScope, $http, $location) {
     self.updateCurrency = (task) => {
         if (task.completed === true) {
             self.currency += task.importance;
-        } else if (value === false) {
+        } else if (task.completed === false) {
             self.currency -= task.importance;
         } else {
             console.log("error");
