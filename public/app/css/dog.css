@@ -1,3 +1,30 @@
+/* speech bubble */
+.speech-bubble {
+    width: 300px;
+    min-height: 80px;
+    background: rgba(255, 255, 255, 0.705);
+    position: relative;
+    margin-bottom: 100px;
+    /* top: -100px;
+    left: -85px; */
+    border-radius: 15px;
+}
+.speech-bubble:after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.705);
+    position: absolute;
+    left: 30px;
+}
+
+.speech-text {
+    font-size: 24px;
+    color: 062733;
+    padding: 10px;
+}
+
+
 /* ____________ */
 /* DOG STYLING */
 /* ___________ */

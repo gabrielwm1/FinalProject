@@ -9,7 +9,6 @@ const submit = {
         vm.hideForm = () => {
             vm.showForm = false;
             MainService.setValue(vm.showForm);
-            console.log(vm.showForm);
             //$rootScope.$broadcast("hideForm", false);
         }
 
