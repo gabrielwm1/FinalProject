@@ -70,6 +70,7 @@ body {
 /* To Do list styling */
 
 .main-container {
+    margin-top: 60px;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -462,9 +463,6 @@ input {
         margin-top: 60px;
     }
     /* to do page */
-    .main-container {
-        margin-top: 60px;
-    }
     .toggle-container {
         position: fixed;
         top: 0;
