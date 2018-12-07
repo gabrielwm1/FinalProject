@@ -9,7 +9,12 @@ const todolist = {
         //vm.showForm = MainService.getValue();
 
         // recieves broadcast
-
+        
+        vm.showForm = () => {
+            // $rootScope.$broadcast("showForm", true);
+            MainService.setValue(true);
+            //MainService.loadList();
+        };
         vm.getValue = () => {
             return MainService.getDisplayValue();  
         }
@@ -54,7 +59,6 @@ const todolist = {
         vm.completedTask = (task) => {
             if (task.completed === true) {
                 task.completed = false
-
             } else {
                 task.completed = true
             }
@@ -63,7 +67,7 @@ const todolist = {
             MainService.put(task).then((result) => {
                 vm.getAll();
             });
-            MainService.updateCurrency(task.completed);
+            MainService.updateCurrency(task);
         };
 
         // updates edited task

@@ -34,14 +34,14 @@ body {
     text-align: center;
 }
 
-.fa-plus, .fa-th-list {
+.home-plus, .fa-th-list {
     margin-top: 30px;
     color: #E0A707;
     font-size: 90px;
     transition: 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
-.fa-th-list:hover, .fa-plus:hover {
+.fa-th-list:hover, .home-plus:hover {
     color: #E0BC63;
     cursor: pointer;
     font-size: 95px;
@@ -69,6 +69,16 @@ body {
 
 /* To Do list styling */
 
+.todo-add {
+    position: fixed;
+    font-size: 40px;
+    left: 80px;
+    top: 20px;
+    color: #062733;
+}
+.todo-add:hover {
+    cursor: pointer;
+}
 .main-container {
     margin-top: 60px;
     display: flex;
@@ -518,11 +528,11 @@ input {
     .nav-todo {
         border-radius: 0 15px 15px 0;
     }
-    .fa-plus, .fa-th-list {
+    .home-plus, .fa-th-list {
         margin: 20px;
         font-size: 60px;
     }
-    .fa-th-list:hover, .fa-plus:hover {
+    .fa-th-list:hover, .home-plus:hover {
         font-size: 60px;
     }
     .currency {

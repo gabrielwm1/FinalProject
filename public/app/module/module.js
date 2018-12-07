@@ -7,7 +7,7 @@ angular
             template: "<home></home>"
         })
         .when("/todolist", {
-            template: "<todolist></todolist>"
+            template: "<todolist></todolist>",
         })
         .when("/submit", {
             template: "<submit></submit>"

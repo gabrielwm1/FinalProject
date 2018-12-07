@@ -18,11 +18,11 @@ function MainService($rootScope, $http, $location) {
         return self.currency;
     }
     //updates the value of our currency based on completed tasks
-    self.updateCurrency = (value) => {
-        if (value === true) {
-            self.currency++;
+    self.updateCurrency = (task) => {
+        if (task.completed === true) {
+            self.currency += task.importance;
         } else if (value === false) {
-            self.currency--;
+            self.currency -= task.importance;
         } else {
             console.log("error");
         }
@@ -69,9 +69,11 @@ function MainService($rootScope, $http, $location) {
             method: "GET",
         });
     };
-
+    // self.worth = 0; 
     // new todo post
     self.postTodo = (newTask) => {
+        // self.worth = newTask.importance;
+        console.log(newTask.importance);
         return $http({
             url: "/tasks",
             method: "POST",
