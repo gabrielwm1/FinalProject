@@ -72,8 +72,6 @@ function MainService($rootScope, $http, $location) {
     // self.worth = 0; 
     // new todo post
     self.postTodo = (newTask) => {
-        // self.worth = newTask.importance;
-        console.log(newTask.importance);
         return $http({
             url: "/tasks",
             method: "POST",

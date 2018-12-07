@@ -24,6 +24,7 @@ body {
     left: 10px;
     transform: translateY(-50%);
     box-shadow: 2px 2px 5px 1px rgb(87, 133, 151);
+    z-index: 999;
 }
 
 .nav-form {
