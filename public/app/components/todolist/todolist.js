@@ -54,7 +54,6 @@ const todolist = {
         vm.completedTask = (task) => {
             if (task.completed === true) {
                 task.completed = false
-
             } else {
                 task.completed = true
             }
@@ -63,7 +62,7 @@ const todolist = {
             MainService.put(task).then((result) => {
                 vm.getAll();
             });
-            MainService.updateCurrency(task.completed);
+            MainService.updateCurrency(task);
         };
 
         // updates edited task
