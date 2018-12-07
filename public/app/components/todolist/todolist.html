@@ -1,5 +1,9 @@
 <section class="main-container">
     <a href="#!/home" class="back-to-home"><i class="fa fa-arrow-left"></i></a>
+   
+    <i ng-click="$ctrl.showForm();" class="todo-add fas fa-plus"></i>
+    
+
     <section class="box">
         <h2>Daily Habits</h2>
         <section ng-hide="task.completed === true && $ctrl.toggle === true" ng-repeat="task in $ctrl.dailyTask" class="daily-container">
@@ -41,11 +45,15 @@
         <submit></submit>
     </section>
 
+
     <div class="toggle-container">
         <label class="switch">
             <input type="checkbox" />
             <div ng-click="$ctrl.toggleCompleted();"></div>
         </label>
     </div>
+  
+      
+ 
 
 </section>
