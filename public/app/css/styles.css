@@ -160,13 +160,24 @@ body {
 .fake-select {
     height: 18px;
     width: 18px;
-    background-color: #659EBE;
+    background-image: url("../images/coin.svg");
     border-radius: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     box-shadow: 0 0.1em 0.3em rgba(0, 0, 0, 0.3);
+}
+
+.big-coin {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 35%;
+    width: 35%;
+    border: none;
+    z-index: 800;
 }
 
 /* toggle styling */
@@ -228,6 +239,7 @@ body {
     border-radius: 15px;
     box-shadow: 2px 2px 5px 1px rgb(87, 133, 151);
 }
+
 
 .coin {
     margin: 20px;
