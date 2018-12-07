@@ -11,6 +11,8 @@ function MainService($rootScope, $http, $location) {
        self.showForm = data;
     };
 
+  
+
     // currency
     self.currency = 0;
     //return our currency to date
@@ -21,7 +23,7 @@ function MainService($rootScope, $http, $location) {
     self.updateCurrency = (task) => {
         if (task.completed === true) {
             self.currency += task.importance;
-        } else if (value === false) {
+        } else if (task.completed === false) {
             self.currency -= task.importance;
         } else {
             console.log("error");

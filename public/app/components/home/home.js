@@ -5,7 +5,7 @@ const home = {
         const vm = this;
         vm.allTask = undefined;
         vm.compTasks = undefined;
-
+        vm.sadDog = false;
         // updates tasks from promise
         vm.setMood = (comp, all) => {
             vm.mood = comp / all;
@@ -13,7 +13,11 @@ const home = {
                 Completed Tasks: ${all}
                 All Tasks: ${comp}  
                 Mood: ${vm.mood}
-            `);            
+            `);
+            if (vm.mood < 0.5) {
+                vm.sadDog = true; 
+            } 
+            console.log(vm.sadDog) ;          
             return vm.mood;
         }
         
@@ -31,6 +35,7 @@ const home = {
         };
 
         vm.getMoodData();
+        
     }]
 };
 
