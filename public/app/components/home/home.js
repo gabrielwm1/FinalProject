@@ -1,7 +1,7 @@
 "use strict";
 const home = {
     templateUrl: "app/components/home/home.html",
-    controller: ["MainService", "getMoodData", function (MainService) {
+    controller: ["MainService", function (MainService) {
         const vm = this;
         vm.allTask = undefined;
         vm.compTasks = undefined;
@@ -19,7 +19,7 @@ const home = {
         
         // gets all tasks and uncompleted tasks on load
         vm.getMoodData = () => {
-            MainService.$scope.getTasks().then((result) => {
+            MainService.getTasks().then((result) => {
                 vm.allTasks = result.data.length;
                 return vm.allTask;
             });

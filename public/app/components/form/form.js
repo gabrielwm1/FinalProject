@@ -40,6 +40,7 @@ const submit = {
         vm.addFrequency = (value) => {
             if (value === "daily") {
                 vm.newTask.daily = true;
+                //console.log(vm.newTask.importance);
             }
             else if (value === "weekly") {
                 vm.newTask.weekly = true;
