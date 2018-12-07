@@ -490,6 +490,10 @@ input {
 /* iphone plus */
 
 @media only screen and (max-width: 414px) {
+    .dog {
+        margin-top: 0;
+    }
+
     .nav-bar {
         width: 202px;
         height: 100px;
