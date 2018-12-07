@@ -1,0 +1,75 @@
+  .clouds {
+      position: fixed;
+      top: 0;
+  }
+
+  .cloud1 {
+      width: 180px;
+      height: 50px;
+      background: #92D5E7;
+      margin: 80px 0 0 0px;
+      border-radius: 50px;
+      -webkit-transform: translateX(-400px);
+      -webkit-animation: move 30s linear infinite;
+      display: block-inline;
+  }
+
+  .cloud1:before {
+      content: "";
+      position: absolute;
+      width: 90px;
+      height: 90px;
+      background: #92D5E7;
+      border-radius: 50%;
+      margin: -50px 0 0 20px;
+  }
+
+  .cloud1:after {
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      background: #92D5E7;
+      border-radius: 50%;
+      margin: -30px 0 0 90px;
+  }
+
+  .cloud2 {
+      width: 100px;
+      height: 35px;
+      background: #89CCDB;
+      margin: 30px 0 0 -300px;
+      border-radius: 50px;
+      -webkit-transform: translateX(-520px);
+      -webkit-animation: move 23s linear infinite;
+      display: block-inline;
+  }
+
+  .cloud2:before {
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      background: #89CCDB;
+      border-radius: 50%;
+      margin: -35px 0 0 20px;
+  }
+
+  .cloud2:after {
+      content: "";
+      position: absolute;
+      width: 45px;
+      height: 45px;
+      background: #89CCDB;
+      border-radius: 50%;
+      margin: -20px 0 0 50px;
+  }
+
+  @-webkit-keyframes move {
+      0% {
+          -webkit-transform: translateX(-340px);
+      }
+      100% {
+          -webkit-transform: translateX(1440px);
+      }
+  }
