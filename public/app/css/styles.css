@@ -208,21 +208,6 @@ body {
     transform: translate3d(100%, 0, 0);
 }
 
-/*Form Styling*/
-
-.form-modal {
-    z-index: 900;
-    position: absolute;
-    left: 0;
-    top: 0
-}
-
-.form-overlay {
-    background-color: rgba(101, 157, 190, 0.795);
-    height: 100vh;
-    width: 100vw;
-}
-
 .coin-container {
     position: fixed;
     top: 10px;
@@ -262,6 +247,18 @@ body {
 }
 
 /* form styling */
+.form-modal {
+    z-index: 900;
+    position: absolute;
+    left: 0;
+    top: 0
+}
+
+.form-overlay {
+    background-color: rgba(101, 157, 190, 0.795);
+    height: 100vh;
+    width: 100vw;
+}
 
 .form-exit {
     font-size: 24px;
@@ -319,7 +316,7 @@ input {
 }
 
 .form-btns button {
-    margin: 10px;
+    margin: 10px 2px;
     flex-grow: 1;
     border-radius: 10px;
     color: white;
