@@ -3,7 +3,10 @@
     <section class="box">
         <h2>Daily Habits</h2>
         <section ng-hide="task.completed === true && $ctrl.toggle === true" ng-repeat="task in $ctrl.dailyTask" class="daily-container">
-            <input ng-click="$ctrl.completedTask(task)" class="radio" type="radio">
+            <section ng-click="$ctrl.completedTask(task)" class="fake-radio">
+                <section ng-show="task.completed === true" class="fake-select"></section>
+            </section>
+            <!-- <input ng-click="$ctrl.completedTask(task)" class="radio" type="radio"> -->
             <input ng-model="task.task" class="task-name" ng-blur="$ctrl.updateTask(task);" ng-class="{'completed': task.completed === true}">
             <i class="fa fa-times" aria-hidden="true" ng-click="$ctrl.delete(task.id)"></i>
         </section>
@@ -12,7 +15,10 @@
     <section class="box">
         <h2>Weekly Habits</h2>
         <section ng-hide="task.completed === true && $ctrl.toggle === true" ng-repeat="task in $ctrl.weeklyTask" class="weekly-container">
-            <input ng-click="$ctrl.completedTask(task)" class="radio" type="radio">
+            <section ng-click="$ctrl.completedTask(task)" class="fake-radio">
+                <section ng-show="task.completed === true" class="fake-select"></section>
+            </section>
+            <!-- <input ng-click="$ctrl.completedTask(task)" class="radio" type="radio"> -->
             <input ng-model="task.task" class="task-name" ng-blur="$ctrl.updateTask(task);" ng-class="{'completed': task.completed === true}">
             <i class="fa fa-times" aria-hidden="true" ng-click="$ctrl.delete(task.id)"></i>
         </section>
@@ -21,7 +27,10 @@
     <section class="box">
         <h2>To-Do List</h2>
         <section ng-hide="task.completed === true && $ctrl.toggle === true" ng-repeat="task in $ctrl.todoTask" class="todo-container">
-            <input ng-click="$ctrl.completedTask(task)" class="radio" type="radio">
+            <section ng-click="$ctrl.completedTask(task)" class="fake-radio">
+                <section ng-show="task.completed === true" class="fake-select"></section>
+            </section>
+            <!-- <input ng-click="$ctrl.completedTask(task)" class="radio" type="radio"> -->
             <input ng-model="task.task" class="task-name" ng-blur="$ctrl.updateTask(task);" ng-class="{'completed': task.completed === true}">
             <i class="fa fa-times" aria-hidden="true" ng-click="$ctrl.delete(task.id)"></i>
         </section>
