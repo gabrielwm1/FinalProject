@@ -150,7 +150,7 @@ body {
 .fake-select {
     height: 18px;
     width: 18px;
-    background-color: #659EBE;
+    background-image: url("../images/coin.svg");
     border-radius: 100%;
     position: absolute;
     top: 50%;
