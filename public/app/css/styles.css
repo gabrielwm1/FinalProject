@@ -387,6 +387,7 @@ input {
 }
 
 .form-btns button {
+    border: none;
     margin: 10px 2px;
     flex-grow: 1;
     border-radius: 10px;
@@ -419,6 +420,7 @@ input {
 }
 
 .edit-btn {
+    border: none;
     background-color: #659EBE;
     border-radius: 10px;
     padding: 20px;
