@@ -176,16 +176,28 @@ body {
     width: 35%;
     border: none;
     z-index: 800;
-    animation: expand 3s linear;
+    animation: expand 2s linear forwards, spin 1s 2s, fade 4s 6s forwards;
 }
 
 @keyframes expand{
-    0% {
-        transform:rotate(0deg) scale(0);
-      }
+    0%{
+        transform: translateY(150%);
+    }
       100% {
-        transform:rotate(360deg) scale(1);
+        transform:translateY(-0%);
       }
+}
+
+@keyframes spin{
+    100%{
+        transform: rotateY(360deg);
+    }
+    
+}
+@keyframes fade{
+    100%{
+        opacity: 0;
+    }
 }
 
 /* toggle styling */
