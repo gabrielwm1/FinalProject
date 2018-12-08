@@ -1,13 +1,14 @@
 <section class="main-container">
     <a href="#!/home" class="back-to-home"><i class="fa fa-arrow-left"></i></a>
 
-    <section class="todo-header"></section>
-
     <section class="big-coin hide">
         <p class="currency">{{$ctrl.task.importance}}</p>
         <!-- Will call currency here -->
         <img class="coin" src="app/images/coin.svg" alt="coin image">
     </section>
+
+    <section class="todo-header"></section>
+
    
     <i ng-click="$ctrl.showForm();" class="todo-add fas fa-plus"></i>
     <section class="box">

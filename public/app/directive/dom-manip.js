@@ -13,11 +13,13 @@ function displayDir() {
             })
 
             // Karissa is working on this
-            // $element.on("click", () => {
-            //     if($element[0].classList[0] === "fake-radio"){
-            //         $element[0].parentElement.ownerDocument.body.children[0].children[0].children[0].children[1].classList.toggle("hide");
-            //     }
-            // });
+            $element.on("click", () => {
+                if($element[0].classList[0] === "fake-radio"){
+                    console.log("hey");
+                    
+                    $element[0].parentElement.ownerDocument.body.children[0].children[0].children[0].children[1].classList.toggle("hide");
+                }
+            });
         }
     };
 }
