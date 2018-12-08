@@ -176,7 +176,7 @@ body {
     width: 35%;
     border: none;
     z-index: 800;
-    animation: expand 2s linear forwards, spin 1s 2s, fade 4s 6s forwards;
+    animation: expand .5s linear forwards, spin 1s 1s, fade 2s 2.5s forwards;
 }
 
 @keyframes expand{
