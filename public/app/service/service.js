@@ -1,17 +1,47 @@
 "use strict";
 function MainService($rootScope, $http, $location) {
     const self = this;
-    
+
     //handles form showing and hidding
     self.showForm = true;
-    self.getDisplayValue =() =>{
+    self.getDisplayValue = () => {
         return self.showForm;
     }
     self.setValue = (data) => {
-       self.showForm = data;
+        self.showForm = data;
     };
 
-  
+    // Erica is working on this for the resolve in the module
+    // // gets mood on load
+    // self.sendMood = () => {
+    //     return self.mood;
+    // }
+    // self.mood = undefined;
+    // self.setMood = (comp, all) => {
+    //     self.mood = comp / all;
+    //     console.log(`
+    //                 Completed Tasks: ${all}
+    //                 All Tasks: ${comp}  
+    //                 Mood: ${self.mood}
+    //             `);
+    //             console.log(self.mood);
+
+    //     return self.mood;
+    // }
+
+    // self.getMoodData = () => {
+    //     self.getTasks().then((result) => {
+    //         self.allTasks = result.data.length;
+    //         return self.allTask;
+    //     });
+
+    //     self.getCompletedTasks().then((result) => {
+    //         self.compTasks = result.data.length;
+    //         return self.compTasks, self.setMood(self.compTasks, self.allTasks);
+    //     });
+    // };
+
+
 
     // currency
     self.currency = 0;
@@ -23,6 +53,8 @@ function MainService($rootScope, $http, $location) {
     self.updateCurrency = (task) => {
         if (task.completed === true) {
             self.currency += task.importance;
+        } else if (self.currency <= 0) {
+            return self.currency;
         } else if (task.completed === false) {
             self.currency -= task.importance;
         } else {
@@ -31,9 +63,9 @@ function MainService($rootScope, $http, $location) {
     }
     // updates currency after buying items
     self.buyItems = (value) => {
-        if(value >= 0){
+        if (value >= 0) {
             self.currency -= value;
-        };        
+        };
     }
 
     // all get requests
@@ -41,7 +73,7 @@ function MainService($rootScope, $http, $location) {
         return $http({
             url: "/tasks",
             method: "GET",
-        })
+        });
     };
 
     //get all completed
@@ -49,7 +81,7 @@ function MainService($rootScope, $http, $location) {
         return $http({
             url: "/tasks/completed",
             method: "GET",
-        })
+        });
     }
 
 
@@ -123,7 +155,7 @@ function MainService($rootScope, $http, $location) {
             item: "Ball",
             price: 8,
             bought: false,
-            image:"./app/images/ball.png"
+            image: "./app/images/ball.png"
         },
         {
             id: 3,
@@ -139,7 +171,7 @@ function MainService($rootScope, $http, $location) {
             bought: false,
             image: "./app/images/toy.png"
         },
-        
+
     ];
 
     self.getCart = () => {
