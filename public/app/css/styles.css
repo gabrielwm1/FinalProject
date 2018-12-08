@@ -172,13 +172,32 @@ body {
 
 .big-coin {
     position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     height: 35%;
     width: 35%;
     border: none;
     z-index: 800;
+    animation: expand .5s linear forwards, spin 1s 1s, fade 2s 2.5s forwards;
+}
+
+@keyframes expand{
+    0%{
+        transform: translateY(150%);
+    }
+      100% {
+        transform:translateY(-0%);
+      }
+}
+
+@keyframes spin{
+    100%{
+        transform: rotateY(360deg);
+    }
+    
+}
+@keyframes fade{
+    100%{
+        opacity: 0;
+    }
 }
 
 /* toggle styling */
