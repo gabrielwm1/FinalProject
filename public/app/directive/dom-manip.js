@@ -12,14 +12,12 @@ function displayDir() {
                 }
             })
 
-            $element.on("click", () => {
-                console.log($element[0].parentElement.ownerDocument.body.children[0].children[0].children[0].children[1].classList);
-                console.log($element);
-                if($element[0].classList[0] === "fake-radio"){
-                    console.log("Hey");
-                    $element[0].parentElement.ownerDocument.body.children[0].children[0].children[0].children[1].classList.toggle("hide");
-                }
-            });
+            // Karissa is working on this
+            // $element.on("click", () => {
+            //     if($element[0].classList[0] === "fake-radio"){
+            //         $element[0].parentElement.ownerDocument.body.children[0].children[0].children[0].children[1].classList.toggle("hide");
+            //     }
+            // });
         }
     };
 }

@@ -3,7 +3,7 @@ const todolist = {
     templateUrl: "app/components/todolist/todolist.html",
     controller: ["$rootScope", "MainService", function ($rootScope, MainService) {
         const vm = this;
-        var value = true;
+        vm.toggle = false;
         //now receiving broadcast in the service
 
         //vm.showForm = MainService.getValue();
