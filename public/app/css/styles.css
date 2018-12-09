@@ -469,6 +469,20 @@ input {
     right: 10px;
 }
 
+.price-container{
+    width: 90%;
+    height: 15%;
+    margin: 2px;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+}
+
+.price-coin{
+    height: 18px;
+    width: 18px;
+}
+
 .inventory-item {
     width: 150px;
     height: 150px;
@@ -531,6 +545,33 @@ input {
     width: 50px;
     z-index: 5;
 }
+/* fire hydrant */
+.toy6 {
+    position: fixed;
+    left: 65%;
+    bottom: 40%;
+    height: 50px;
+    width: 50px;
+    z-index: 5;
+}
+
+.treat6 {
+    width: 200px;
+    height: 200px;
+}
+
+
+/* sunglasses */
+.toy7 { 
+    position: fixed;
+    left: 46.8%;
+    bottom: 67%;
+    height: 50px;
+    width: 50px;
+    z-index: 5;
+}
+
+
 
 /* ONLY FOR HIDING KEEP AT BOTTOM */
 
@@ -577,9 +618,13 @@ input {
 
 /* iphone plus */
 
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 426px) {
     .dog {
         margin-top: 0;
+    }
+
+    .coin-container{
+        transform: translateY(550%);
     }
 
     .nav-bar {
@@ -587,7 +632,7 @@ input {
         height: 100px;
         flex-direction: row;
         top: 10px;
-        transform: translateY(0%);
+        transform: translateY(550%);
     }
     .nav-form, .nav-todo, .coin-container {
         height: 100px;
