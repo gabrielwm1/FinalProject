@@ -90,7 +90,6 @@ const todolist = {
             } else {
                  vm.toggle = true;
             }
-            console.log(vm.toggle);
         };
     }]
 }

@@ -24,9 +24,13 @@
 
 .speech-text {
     font-size: 24px;
-    color: 062733;
     padding: 10px;
     color: #0c4155;
+}
+
+.insuffcient-funds {
+    background: rgba(255, 255, 255);
+    z-index: 9999;
 }
 
 /* ____________ */

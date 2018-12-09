@@ -3,7 +3,6 @@
 const express = require("express");
 const routes = express.Router();
 const pool = require("../connection/connection.js");
-let req = null;
 
 // return
 function getTasks(req,res){
