@@ -167,7 +167,7 @@ function MainService($rootScope, $http, $location) {
         {
             id: 4,
             item: "Toy",
-            price: 20,
+            price: 7,
             bought: false,
             image: "./app/images/toy.png"
         },

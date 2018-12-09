@@ -472,7 +472,7 @@ input {
 .price-container{
     width: 90%;
     height: 15%;
-    margin: 5px;
+    margin: 2px;
     padding: 2px;
     display: flex;
     align-items: center;
@@ -618,9 +618,13 @@ input {
 
 /* iphone plus */
 
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 426px) {
     .dog {
         margin-top: 0;
+    }
+
+    .coin-container{
+        transform: translateY(550%);
     }
 
     .nav-bar {
@@ -628,7 +632,7 @@ input {
         height: 100px;
         flex-direction: row;
         top: 10px;
-        transform: translateY(0%);
+        transform: translateY(550%);
     }
     .nav-form, .nav-todo, .coin-container {
         height: 100px;
