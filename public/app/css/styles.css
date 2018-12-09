@@ -217,7 +217,7 @@ body {
     width: 35%;
     border: none;
     z-index: 800;
-    animation: expand .5s ease-in-out forwards, spin 1s 1s ease-in-out, fade 2s 2.5s forwards;
+    animation: expand .5s ease-in-out forwards, spin 1s 1s ease-in-out, leave 1s 2.5s cubic-bezier(1,.02,.4,.93) forwards;
 }
 
 @keyframes expand{
@@ -235,9 +235,12 @@ body {
     }
     
 }
-@keyframes fade{
+@keyframes leave{
+    0%{
+        transform: translateX(0%);
+    }
     100%{
-        opacity: 0;
+        transform: translateX(-200%);
     }
 }
 
