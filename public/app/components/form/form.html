@@ -7,16 +7,16 @@
         <p class="form-label">Importance:</p>
 
         <div class="form-btns">
-            <button class="low" ng-click="$ctrl.addImportance(1)">!</button>
-            <button class="medium" ng-click="$ctrl.addImportance(2)">!!</button>
-            <button class="high" ng-click="$ctrl.addImportance(3)">!!!</button>
+            <button display-dir class="low" ng-click="$ctrl.addImportance(1)">!</button>
+            <button display-dir class="medium" ng-click="$ctrl.addImportance(2)">!!</button>
+            <button display-dir class="high" ng-click="$ctrl.addImportance(3)">!!!</button>
         </div>
         <p class="form-label">Frequency:</p>
 
         <div class="form-btns task-type-contain">
-            <button dom-fun class="daily-btn" ng-click="$ctrl.addFrequency('daily')">Daily</button>
-            <button class="weekly-btn" ng-click="$ctrl.addFrequency('weekly')">Weekly</button>
-            <button class="todo-btn" ng-click="$ctrl.addFrequency('todo')">Todo</button>
+            <button display-dir class="daily-btn" ng-click="$ctrl.addFrequency('daily')">Daily</button>
+            <button display-dir class="weekly-btn" ng-click="$ctrl.addFrequency('weekly')">Weekly</button>
+            <button display-dir class="todo-btn" ng-click="$ctrl.addFrequency('todo')">Todo</button>
         </div>
         <button class="edit-btn" ng-click="$ctrl.saveTask($ctrl.newTask); $ctrl.hideForm(); $ctrl.closeAndRefresh()">Submit</button>
     </section>
