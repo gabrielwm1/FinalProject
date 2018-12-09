@@ -167,10 +167,25 @@ function MainService($rootScope, $http, $location) {
         {
             id: 4,
             item: "Toy",
-            price: 20,
+            price: 7,
             bought: false,
             image: "./app/images/toy.png"
         },
+        {
+            id: 5,
+            item: "Fire Hydrant",
+            price: 15,
+            bought: false,
+            image: "./app/images/fire-hydrant.png"  
+        },
+        {
+            id: 6,
+            item: "Glasses",
+            price: 6,
+            bought: false,
+            image: "./app/images/sunglasses.png"  
+        }
+
 
     ];
 

@@ -7,7 +7,10 @@
     <section class="inventory-container dir-hide">
         <section class="inventory-item" ng-repeat="item in $ctrl.inventory">
             <section class="items" ng-click="$ctrl.buyItems(item.id, item)">
-                <p>Price: {{item.price}}</p>
+                <section class="price-container">
+                    <img class="price-coin" src="app/images/coin.svg" alt="coin image">
+                    <p>x{{item.price}}</p>
+                </section>
                 <img class="inventory-img" ng-src="{{item.image}}">
             </section>
         </section>
@@ -27,6 +30,12 @@
         </section>
         <section class="toy5" ng-hide="$ctrl.inventory[4].bought === false">
             <img class="treat" ng-src="{{$ctrl.inventory[4].image}}" alt="treat">
+        </section>
+        <section class="toy6" ng-hide="$ctrl.inventory[5].bought === false">
+            <img class="treat6" ng-src="{{$ctrl.inventory[5].image}}" alt="treat">
+        </section>
+        <section class="toy7" ng-hide="$ctrl.inventory[6].bought === false">
+            <img class="treat" ng-src="{{$ctrl.inventory[6].image}}" alt="treat">
         </section>
     </section>
 </section>
