@@ -217,7 +217,7 @@ body {
     width: 35%;
     border: none;
     z-index: 800;
-    animation: expand .5s linear forwards, spin 1s 1s, fade 2s 2.5s forwards;
+    animation: expand .5s ease-in-out forwards, spin 1s 1s ease-in-out, fade 2s 2.5s forwards;
 }
 
 @keyframes expand{
@@ -231,7 +231,7 @@ body {
 
 @keyframes spin{
     100%{
-        transform: rotateY(360deg);
+        transform: rotateY(1080deg);
     }
     
 }
