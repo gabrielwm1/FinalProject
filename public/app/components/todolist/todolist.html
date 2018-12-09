@@ -26,7 +26,7 @@
     <section class="box">
         <h2>Weekly Habits</h2>
         <section ng-hide="task.completed === true && $ctrl.toggle === false" ng-repeat="task in $ctrl.weeklyTask" class="weekly-container" ng-class="{'high-importance': task.importance === 3, 'med-importance': task.importance === 2}">
-            <section ng-click="$ctrl.completedTask(task)" class="fake-radio">
+            <section display-dir ng-click="$ctrl.completedTask(task)" class="fake-radio">
                 <section ng-show="task.completed === true" class="fake-select"></section>
             </section>
             <!-- <input ng-click="$ctrl.completedTask(task)" class="radio" type="radio"> -->
@@ -38,7 +38,7 @@
     <section class="box">
         <h2>To-Do List</h2>
         <section ng-hide="task.completed === true && $ctrl.toggle === false" ng-repeat="task in $ctrl.todoTask" class="todo-container" ng-class="{'high-importance': task.importance === 3, 'med-importance': task.importance === 2}">
-            <section ng-click="$ctrl.completedTask(task)" class="fake-radio">
+            <section display-dir ng-click="$ctrl.completedTask(task)" class="fake-radio">
                 <section ng-show="task.completed === true" class="fake-select"></section>
             </section>
             <!-- <input ng-click="$ctrl.completedTask(task)" class="radio" type="radio"> -->
