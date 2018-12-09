@@ -62,7 +62,7 @@ const todolist = {
             } else {
                 task.completed = true
             }
-
+            vm.taskImportance = task.importance;
             // // sends to service
             MainService.put(task);
             MainService.updateCurrency(task);
