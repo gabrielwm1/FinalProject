@@ -350,6 +350,76 @@
     animation: bounce 0.6s infinite ease-in alternate-reverse;
 }
 
+/* sad dog styling */
+  .sad .tear1 {
+      width: 10px;
+      height: 10px;
+      border-radius: 0px 8px 8px 8px;
+      background-color: #fff;
+      position: absolute;
+      left: 45px;
+      z-index: 80;
+      animation: cry .5s infinite alternate;
+  }
+  .sad .tear2 {
+      width: 10px;
+      margin-right: 40px;
+      height: 10px;
+      border-radius: 8px 0px 8px 8px;
+      background-color: #fff;
+      position: absolute;
+      left: -35px;
+      z-index: 80;
+      animation: cry 0.5s infinite alternate;
+  }
+  .sad.body{
+    height: 250px;
+  }
+  .sad .stomach{
+    height: 50px;
+  }
+
+  .sad .shine-left, .sad .shine-right {
+    display: none;
+  }
+  .sad .eyes{
+      height: 3vmax;
+  }
+
+  .sad .eyes:before{
+    height: 3px;
+    left: -20px;
+    top: 75%;
+    transform: rotate(-45deg);
+    animation: none;
+    border: none;
+  }
+
+  .sad .eyes:after{
+    height: 3px;
+    right: -20px;
+    top: 75%;
+    transform: rotate(45deg);
+    animation: none;
+    border: none;
+}
+
+  .sad .mouth{
+    border-radius: 30px 30px 3px 3px;
+    border-top: none;
+    height: 10px;
+    animation: whimper 0.8s infinite alternate;
+  }
+  .sad .tongue{
+    display: none!important;
+  }
+  div.sad .tail{
+      bottom: 30px;
+    transform: rotate(90deg);
+    animation: none!important;
+  }
+
+
 /* happy change for dog on pet/hover */
 
 .body:hover {
@@ -411,3 +481,25 @@
         transform: rotate(40deg);
     }
 }
+
+
+@keyframes cry{
+    0%{
+      top: 45px;
+      right: 15px;
+    }
+    75%{
+      top: 55px;
+      right: 10px;
+    }
+    100%{
+      background-color: rgba(0,0,0,0);
+    }
+  }
+  
+  @keyframes whimper{
+    100%{
+      height: 15px;
+      width: 15px;
+    }
+  }

@@ -416,6 +416,7 @@ input {
     flex-grow: 1;
     border-radius: 10px;
     color: white;
+    transition: .3s ease-in-out;
 }
 
 .low, .medium, .high {
