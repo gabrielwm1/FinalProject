@@ -10,6 +10,7 @@ const todolist = {
 
         // recieves broadcast
         
+        vm.
         vm.showForm = () => {
             // $rootScope.$broadcast("showForm", true);
             MainService.setValue(true);
