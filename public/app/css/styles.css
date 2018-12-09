@@ -211,13 +211,24 @@ body {
     box-shadow: 0 0.1em 0.3em rgba(0, 0, 0, 0.3);
 }
 
+.coin-number{
+    font-family: 'Roboto Slab', serif;
+    color: #C1603A;
+    font-size: 140px;
+    position: absolute;
+    left: 49%;
+    top: 78%;
+    margin-left: 10px;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
 .big-coin {
     position: absolute;
     height: 35%;
     width: 35%;
     border: none;
     z-index: 800;
-    animation: expand .5s ease-in-out forwards, spin 1s 1s ease-in-out, fade 2s 2.5s forwards;
+    animation: expand .5s ease-in-out forwards, spin 1s 1s ease-in-out, leave 1s 2.5s cubic-bezier(1,.02,.4,.93) forwards;
 }
 
 @keyframes expand{
@@ -235,9 +246,12 @@ body {
     }
     
 }
-@keyframes fade{
+@keyframes leave{
+    0%{
+        transform: translateX(0%);
+    }
     100%{
-        opacity: 0;
+        transform: translateX(-200%);
     }
 }
 
