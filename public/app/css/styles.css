@@ -124,6 +124,7 @@ body {
     background-color: rgba(247, 251, 252, 0.452);
     box-shadow: 1px 1px 2px 1px rgba(87, 133, 151, 0.1);
     border-left: 10px solid transparent;
+    transition: 1s ease-out;
 }
 
 .high-importance {

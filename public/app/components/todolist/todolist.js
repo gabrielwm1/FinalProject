@@ -63,10 +63,8 @@ const todolist = {
                 task.completed = true
             }
 
-            // sends to service
-            MainService.put(task).then((result) => {
-                vm.getAll();
-            });
+            // // sends to service
+            MainService.put(task);
             MainService.updateCurrency(task);
         };
 
@@ -93,7 +91,6 @@ const todolist = {
                  vm.toggle = true;
             }
             console.log(vm.toggle);
-            vm.getAll();
         };
     }]
 }
