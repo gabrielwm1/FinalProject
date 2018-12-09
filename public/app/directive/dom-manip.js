@@ -3,7 +3,7 @@
 function displayDir() {
     return {
         restrict: "A",
-        link: function ($scope, $element, $attrs, $location) {
+        link: function ($scope, $element, $attrs, $location, $timeout) {
 
             $element.on("click", () => {
                 if ($element[0].classList[0] === "coin-container") {
@@ -13,7 +13,9 @@ function displayDir() {
             })
 
             $element.on("click", () => {
-                if($element[0].classList[0] === "fake-radio"){
+                console.log($element);
+                
+                if($element[0].classList[0] === "fake-radio" && $element[0].children[0].classList[1] === "ng-hide"){
                     $element[0].parentElement.ownerDocument.body.children[0].children[0].children[0].children[1].classList.toggle("hide");
                 }
             });
