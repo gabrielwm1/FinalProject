@@ -224,17 +224,17 @@ body {
     font-size: 140px;
     position: absolute;
     width: 25%;
-    top: 45%;
-    left: 47%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
-    margin-left: 10%;
+    margin-left: 14%;
 }
 
 .big-coin {
     position: absolute;
-    height: 50%;
-    width: 50%;
-    top: 30%;
+    height: 70%;
+    width: 70%;
+    top: 15%;
     border: none;
     z-index: 800;
     animation: expand .5s ease-in-out forwards, spin 1s 1s ease-in-out, leave 1s 2.5s cubic-bezier(1,.02,.4,.93) forwards;
@@ -242,8 +242,8 @@ body {
 
 .coin2{
     margin: 0px;
-    height: 90%;
-    width: 90%;
+    height: 100%;
+    width: 100%;
 }
 
 @keyframes expand{
