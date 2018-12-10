@@ -623,15 +623,19 @@ input {
         background-color: #E0BC63;
     }
     .inventory-container {
-        width: 100px;
+        width: 200px;
         max-height: calc(100vh - 130px);
-        top: 120px;
+        top: 60px;
         right: 10px;
         background-color: #EFF3F4;
     }
+    .inventory-item{
+        width:200px;
+        height: 200px;
+    }
     .items {
-        width: 100px;
-        height: 100px;
+        width: 200px;
+        height: 200px;
     }
     /* form styling */
     .low, .medium, .high {
