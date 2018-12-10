@@ -23,6 +23,13 @@
     border-right: solid 20px transparent;
 }
 
+.content::before{
+    content: ' ';
+}
+.content::after{
+    content: 'Pet me!';
+}
+
 .speech-text {
     font-size: 24px;
     color: #062733;
