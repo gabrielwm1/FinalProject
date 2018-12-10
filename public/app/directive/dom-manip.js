@@ -20,7 +20,6 @@ function displayDir() {
 
                     setTimeout(function(){
                         $element[0].parentElement.ownerDocument.body.children[0].children[0].children[0].children[1].classList.toggle("hide");
-                        console.log("its been 5 seconds");  
                     }, 5000);
                 }
             });
@@ -35,15 +34,21 @@ function displayDir() {
             // displays dog speech of not enough money when currency is less than item price, removes after 5 seconds
             $element.on("click", () => {                
                 if($element[0].classList[0] === "inventory-item" && $element[0].classList[2] === "not-enough"){
-                    console.log($element);
                     $element[0].parentElement.parentElement.ownerDocument.body.firstElementChild.children[0].children[3].children[0].children[1].classList.toggle("hide");
 
                     setTimeout(function(){
                         $element[0].parentElement.parentElement.ownerDocument.body.firstElementChild.children[0].children[3].children[0].children[1].classList.toggle("hide");
-                        console.log("its been 5 seconds");  
                     }, 5000);
                 }
             });
+
+            // hides deleted task so we don't have to make another call after using put method
+            $element.on("click", () => {                                
+                if($element[0].classList[2] === "delete-task-icon"){
+                    $element[0].parentElement.classList.add("hide");
+                }
+            });
+
         }
     };
 }
