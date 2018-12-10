@@ -211,6 +211,17 @@ body {
     box-shadow: 0 0.1em 0.3em rgba(0, 0, 0, 0.3);
 }
 
+.coin-number{
+    font-family: 'Roboto Slab', serif;
+    color: #C1603A;
+    font-size: 140px;
+    position: absolute;
+    left: 49%;
+    top: 78%;
+    margin-left: 10px;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
 .big-coin {
     position: absolute;
     height: 35%;
