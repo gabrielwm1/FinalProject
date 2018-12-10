@@ -22,11 +22,10 @@
     border-left: solid 20px transparent;
     border-right: solid 20px transparent;
 }
-
-.content::before{
+.content-pet-me::before{
     content: ' ';
 }
-.content::after{
+.content-pet-me::after{
     content: 'Pet me!';
 }
 
@@ -34,25 +33,20 @@
     font-size: 24px;
     color: #062733;
     padding: 10px;
-    /* color: #0c4155; */
-    /* content: "pet me!"; */
-   
-    animation: speech 0.8s steps(6) forwards, blinkText 500ms 0.8s steps(40) infinite normal; 
-    /* content: 'Pet me!'; */
     overflow: hidden;
     white-space: nowrap;
     border-right: 4px solid #3c3b3c;
-    /* width: 9ch; */
-
-
 }
-/* .pet-me {
-    width: 150px;
-} */
+.pet-me {
+    animation: speechPetme 0.8s steps(6) forwards, blinkText 500ms 0.8s steps(40) infinite normal; 
+}
 
-.insuffcient-funds {
-    background: rgba(255, 255, 255);
-    z-index: 9999;
+.not-enough-funds {
+    animation: speechLazy 1.5s steps(18) forwards, blinkText 500ms 1.5s steps(40) infinite normal;
+}
+
+.complete-tasks {
+    animation: speechCompTasks 1.5s steps(22) forwards, blinkText 500ms 1.5s steps(40) infinite normal;
 }
 
 /* ____________ */
@@ -464,13 +458,29 @@
     height: 1px;
     border-radius: 100px 100px 0 0;
 }
-@keyframes speech{
+@keyframes speechPetme{
     0%{ 
         width: 0ch;
 
     }
     100%{
         width: 6ch;
+    }
+}
+@keyframes speechLazy{
+    0%{ 
+        width: 0ch;
+    }
+    100%{
+        width: 15ch;
+    }
+}
+@keyframes speechCompTasks{
+    0%{
+        width: 0ch;
+    }
+    100%{
+        width: 19ch;
     }
 }
 @keyframes blinkText{
