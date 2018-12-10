@@ -4,9 +4,19 @@ function MainService($rootScope, $http, $location) {
 
     //handles form showing and hidding
     self.showForm = true;
+    //returns value so that we hide the intro modal
+    self.setIntroValue = () =>{
+        self.introValue = false;
+    }
+    //sends value for intro modal
+    self.getIntroValue = () => {
+        return self.introValue;;
+    }
+    //hides and show form
     self.getDisplayValue = () => {
         return self.showForm;
     }
+    //sets data to false or true to hide/show the form page
     self.setValue = (data) => {
         self.showForm = data;
     };

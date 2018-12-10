@@ -1,4 +1,5 @@
 <navbar></navbar>
+
 <section class="clouds">
     <div class="cloud1"></div>
     <div class="cloud2"></div>
@@ -11,3 +12,8 @@
 <shopping></shopping>
 
 <img class="logo" src="app/images/planimal.svg">
+
+<section class="form-modal" ng-class="{'hide':$ctrl.showIntro === false}">
+    <section class="form-overlay"></section>
+    <intro hide-intro="$ctrl.hideIntro();"></intro>
+</section>
