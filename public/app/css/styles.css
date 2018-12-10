@@ -9,8 +9,57 @@ body {
     top: 10px;
     left: 10px;
 }
+/* intro modal styling */
+intro{
+    border-radius: 15px;
+    padding: 20px;
+    width: 60vw;
+    /* height: 60vh; */
+    max-width: 425px;
+    background-color: #EFF3F4;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    /* z-index: 9; */
+    /* border: 4px solid black; */ 
+ }
+.intro-container{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+ .intro-label{
+    color: #062733;
+    font-size: 18px;
+    margin: 25px 10px 15px 10px;
+    line-height: 26px;
+ }
+ .intro-logo{
+     width: 50%;
+     /* position: absolute; */
+     margin: 0 auto;
+ }
+ .intro-input{
+     font-size: 18px;
+     margin-bottom: 20px;
+ }
+ h2.name-pet{
+    font-size: 20px;
+    margin-bottom: 10px;
+ }
+.intro-button{
+    padding: 18px;
+    border: none;
+    border-radius: 15px;
+    background-color: #68BA56;
+    color:white;
+    font-size: 18px;
+    margin: 12px 0px;
+    box-shadow: 2px 2px 5px 1px rgb(134, 143, 146);
 
-
+}
 /* navigation styling */
 .nav-bar {
     height: 302px;
