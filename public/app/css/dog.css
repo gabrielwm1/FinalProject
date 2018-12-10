@@ -22,15 +22,21 @@
     border-left: solid 20px transparent;
     border-right: solid 20px transparent;
 }
-
+.content::before{
+    content: ' ';
+}
+.content::after{
+    content: 'Pet me!';
+}
 .speech-text {
     font-size: 24px;
     color: #062733;
     padding: 10px;
     /* color: #0c4155; */
     /* content: "pet me!"; */
-    animation-delay: 1s;
+   
     animation: speech 0.8s steps(6) forwards, blinkText 500ms 0.8s steps(40) infinite normal; 
+    /* content: 'Pet me!'; */
     overflow: hidden;
     white-space: nowrap;
     border-right: 4px solid #3c3b3c;
