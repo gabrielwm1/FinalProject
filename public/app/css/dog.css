@@ -1,3 +1,24 @@
+/* mood bar */
+
+.mood-bar {
+    background-color: white;
+    border-radius: 15px;
+    position: absolute;
+    left: -40px;
+    bottom: -30px;
+    width: 200px;
+    height: 20px;
+    overflow: hidden;
+    box-shadow: 2px 2px 5px 1px rgba(87, 133, 151, 0.473);
+}
+
+.mood-fill {
+    height: 100%;
+    border-radius: 15px;
+    background-color: goldenrod;
+    text-align: center;
+}
+
 /* speech bubble */
 
 .speech-bubble {

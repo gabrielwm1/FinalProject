@@ -8,13 +8,14 @@ const syntax = {
 
         // updates tasks from promise
         vm.setMood = (comp, all) => {
-            vm.mood = comp / all;
+            vm.mood = (comp / all).toFixed(2) * 100;
+            vm.barPercent = vm.mood + '%';
             console.log(`
-                        Completed Tasks: ${all}
-                        All Tasks: ${comp}  
+                        All Tasks: ${all}
+                        Completed Tasks: ${comp}  
                         Mood: ${vm.mood}
                     `);
-            return vm.mood;
+            return vm.mood, vm.barPercent;
         }
 
         // gets all tasks and uncompleted tasks on load

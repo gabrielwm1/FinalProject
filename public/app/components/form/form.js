@@ -19,7 +19,12 @@ const submit = {
 
         // saves new in service
         vm.saveTask = (task) => {
-            MainService.postTodo(task);    
+            if (task.daily === true || task.weekly === true || task.todo === true) {
+                MainService.postTodo(task);    
+            } else {
+                console.log("Task not submitted. Must select task type.");
+                
+            }
         };
 
         // sets importance for obj
