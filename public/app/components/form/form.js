@@ -19,7 +19,7 @@ const submit = {
 
         // saves new in service
         vm.saveTask = (task) => {
-            MainService.postTodo(task);
+            MainService.postTodo(task);    
         };
 
         // sets importance for obj
