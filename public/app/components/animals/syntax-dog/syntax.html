@@ -1,11 +1,11 @@
 <div class="dog" ng-class="{'sad': $ctrl.mood < .5}">
-    <section class="speech-bubble hide" ng-show="$ctrl.mood >= .5">
+    <section class="speech-bubble" ng-show="$ctrl.mood >= .5">
         <p class="speech-text pet-me">Pet me!</p>
     </section>
     <section class="speech-bubble hide">
         <p class="speech-text not-enough-funds">Not enough coins!! </p>
     </section>
-    <section class="speech-bubble ng-show=$ctrl.mood < .5" >
+    <section class="speech-bubble" ng-show="$ctrl.mood < .5">
         <p class="speech-text complete-tasks">Please complete tasks...</p>
     </section>
 
