@@ -570,6 +570,7 @@ input {
 .inventory-item {
     width: 150px;
     height: 150px;
+    margin-bottom: 2px;
 }
 
 .inventory-img {
