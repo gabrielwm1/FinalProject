@@ -76,9 +76,7 @@ const todolist = {
 
         // deletes task
         vm.delete = (id) => {
-            MainService.delete(id).then((result) => {
-                vm.getAll();
-            });
+            MainService.delete(id);
         };
 
         // toggles todo list to show or hide completed

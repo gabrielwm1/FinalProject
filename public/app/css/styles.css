@@ -3,12 +3,13 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-.linking {
+.logo {
+    max-width: 100px;
     position: fixed;
-    left: 10px;
     top: 10px;
-    z-index: 9999;
+    left: 10px;
 }
+
 
 /* navigation styling */
 .nav-bar {
