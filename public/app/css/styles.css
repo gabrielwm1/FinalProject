@@ -77,9 +77,11 @@ body {
     top: 20px;
     color: #062733;
     z-index: 10;
+    transition: color 0.5s ease;
 }
 .todo-add:hover {
     cursor: pointer;
+    color:rgba(224, 167, 7, 0.8);
 }
 
 .todo-header {
@@ -103,7 +105,7 @@ body {
 
 .box {
     max-height: 80vh;
-    min-width: 300px;
+    min-width: 290px;
     padding: 10px 10px 20px 10px;
     margin: 20px 10px;
     border-radius: 15px;
@@ -156,6 +158,11 @@ body {
     left: 20px;
     color: #062733;
     z-index: 10;
+    transition: color 0.5s ease;
+}
+
+.fa-arrow-left:hover{
+    color: rgba(224, 167, 7, 0.8);
 }
 
 /* .hide-complete {
@@ -216,19 +223,27 @@ body {
     color: #C1603A;
     font-size: 140px;
     position: absolute;
-    left: 49%;
-    top: 78%;
-    margin-left: 10px;
-    transition: 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    width: 25%;
+    top: 45%;
+    left: 47%;
+    transform: translate(-50%, -50%);
+    margin-left: 10%;
 }
 
 .big-coin {
     position: absolute;
-    height: 35%;
-    width: 35%;
+    height: 50%;
+    width: 50%;
+    top: 30%;
     border: none;
     z-index: 800;
     animation: expand .5s ease-in-out forwards, spin 1s 1s ease-in-out, leave 1s 2.5s cubic-bezier(1,.02,.4,.93) forwards;
+}
+
+.coin2{
+    margin: 0px;
+    height: 90%;
+    width: 90%;
 }
 
 @keyframes expand{
@@ -625,6 +640,24 @@ input {
     .task-type-contain {
         flex-direction: column;
     }
+
+    submit{
+        width: 85vw;
+        height: 85vh;
+        overflow: scroll;
+    }
+
+    .form-label{
+        font-size: 20px;
+    }
+
+    .daily-btn,.weekly-btn,.todo-btn,.edit-btn{
+        font-size:25px;
+    }
+
+    .coin-number{
+        font-size: 80px;
+    }
 }
 
 /* iphone x */
@@ -636,4 +669,18 @@ input {
     .nav-bar {
         left: 5px;
     }
+
+    .box{
+        width: 85vw;
+    }
+
+    .daily-container, .weekly-container, .todo-container{
+        width: 90%;
+        align-self: center;
+    }
+
+    .coin-number{
+        font-size: 60px;
+    }
+
 }
