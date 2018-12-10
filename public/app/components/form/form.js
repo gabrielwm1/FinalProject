@@ -22,8 +22,7 @@ const submit = {
             if (task.daily === true || task.weekly === true || task.todo === true) {
                 MainService.postTodo(task);    
             } else {
-                console.log("Task not submitted. Must select task type.");
-                
+                console.log("Task not submitted. Must select task type."); 
             }
         };
 

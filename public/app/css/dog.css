@@ -1,22 +1,45 @@
 /* mood bar */
+.mood-area {
+    position: absolute;
+    left: -58px;
+    bottom: -55px;
+}
 
 .mood-bar {
-    background-color: white;
+    border-top: 1px solid rgba(134, 134, 134, 0.479);
+    border-bottom: 1px solid rgb(255, 255, 255);
+    position: relative;
+    padding-left: 10px;
+    background-color: rgb(240, 240, 240);
     border-radius: 15px;
-    position: absolute;
-    left: -40px;
-    bottom: -30px;
+    margin-left: 10px;
     width: 200px;
-    height: 20px;
-    overflow: hidden;
+    height: 23px;
+    /* overflow: hidden; */
     box-shadow: 2px 2px 5px 1px rgba(87, 133, 151, 0.473);
 }
 
 .mood-fill {
-    height: 100%;
+    position: absolute;
+    left: 0;
+    height: 24px;
     border-radius: 15px;
     background-color: goldenrod;
     text-align: center;
+    box-shadow: 3px 0px 5px 0px rgba(154, 156, 156, 0.4);
+}
+
+.mood-text {
+    margin-top: 3px;
+    color: #062733;
+}
+
+.mood-label {
+    text-align: center;
+    margin-top: 5px;
+    color: rgba(87, 133, 151, 1);
+    text-transform: uppercase;
+    font-size: 13px;
 }
 
 /* speech bubble */
@@ -60,6 +83,11 @@
 }
 .pet-me {
     animation: speechPetme 0.8s steps(6) forwards, blinkText 500ms 0.8s steps(40) infinite normal; 
+}
+
+.funds {
+    background-color: rgba(255, 255, 255, 1);
+    z-index: 999;
 }
 
 .not-enough-funds {
