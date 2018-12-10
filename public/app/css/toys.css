@@ -1,9 +1,96 @@
-.teddybear{
-    width: 100px;
-    height: 100px;
+/* teddy bear */
+.toy1 {
+    position: fixed;
+    left: 35%;
+    bottom: 37%;
+    height: 50px;
+    width: 50px;
+    z-index: 5;
+}
+/* cookie */
+.toy2 {
+    position: fixed;
+    left: 45%;
+    bottom: 15%;
+    height: 50px;
+    width: 50px;
+    z-index: 5;
+}
+/* big ball */
+.toy3 {
+    position: fixed;
+    left: 20%;
+    bottom: 25%;
+    height: 50px;
+    width: 50px;
+    z-index: 5;
 }
 
-.treat{
+/* dish */
+.toy4 {
+    position: fixed;
+    left: 60%;
+    bottom: 23%;
+    height: 50px;
+    width: 50px;
+    z-index: 5;
+}
+
+/* chew toy */
+.toy5 {
+    position: fixed;
+    left: 49%;
+    bottom: 28%;
+    height: 50px;
+    width: 50px;
+    z-index: 5;
+}
+/* fire hydrant */
+.toy6 {
+    position: fixed;
+    left: 65%;
+    bottom: 40%;
+    height: 50px;
+    width: 50px;
+    z-index: 5;
+}
+
+
+
+
+
+
+
+
+.toy{
     width: 100px;
     height: 100px;
+    animation: drop 1s ease-in, jump .5s 1s ease-in-out;
+}
+
+@keyframes drop{
+    0%{
+        transform: translateY(-700%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+@keyframes jump{
+    0%{
+        transform: translateY(0%); 
+    }
+    50%{
+        transform: translateY(-20%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+.firehydrant {
+    width: 200px;
+    height: 200px;
+    animation: drop 1s ease-in;
 }
