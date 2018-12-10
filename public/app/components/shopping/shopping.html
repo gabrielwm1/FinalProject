@@ -5,7 +5,7 @@
         <img class="coin" src="app/images/coin.svg" alt="coin image">
     </section>
     <section class="inventory-container dir-hide">
-        <section class="inventory-item" ng-repeat="item in $ctrl.inventory">
+        <section display-dir class="inventory-item" ng-repeat="item in $ctrl.inventory" ng-class="{'not-enough': $ctrl.currency < item.price}">
             <section class="items" ng-click="$ctrl.buyItems(item.id, item)">
                 <section class="price-container">
                     <img class="price-coin" src="app/images/coin.svg" alt="coin image">
