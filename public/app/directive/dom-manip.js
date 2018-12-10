@@ -51,11 +51,9 @@ function displayDir() {
 
             //hides the introduction form
             $element.on("click", () => {
-                console.log($element);
                 if($element[0].classList[0]==="intro-button"){
                     $element[0].parentElement.parentElement.parentElement.parentElement.parentElement.classList.add("hide");
                 }
-                
             })
 
         }
