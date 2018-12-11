@@ -4,54 +4,26 @@ function MainService($rootScope, $http, $location) {
 
     //handles form showing and hidding
     self.showForm = true;
+    
     //returns value so that we hide the intro modal
     self.setIntroValue = () =>{
         self.introValue = false;
     }
+
     //sends value for intro modal
     self.getIntroValue = () => {
         return self.introValue;;
     }
+
     //hides and show form
     self.getDisplayValue = () => {
         return self.showForm;
     }
+
     //sets data to false or true to hide/show the form page
     self.setValue = (data) => {
         self.showForm = data;
     };
-
-    // Erica is working on this for the resolve in the module
-    // // gets mood on load
-    // self.sendMood = () => {
-    //     return self.mood;
-    // }
-    // self.mood = undefined;
-    // self.setMood = (comp, all) => {
-    //     self.mood = comp / all;
-    //     console.log(`
-    //                 Completed Tasks: ${all}
-    //                 All Tasks: ${comp}  
-    //                 Mood: ${self.mood}
-    //             `);
-    //             console.log(self.mood);
-
-    //     return self.mood;
-    // }
-
-    // self.getMoodData = () => {
-    //     self.getTasks().then((result) => {
-    //         self.allTasks = result.data.length;
-    //         return self.allTask;
-    //     });
-
-    //     self.getCompletedTasks().then((result) => {
-    //         self.compTasks = result.data.length;
-    //         return self.compTasks, self.setMood(self.compTasks, self.allTasks);
-    //     });
-    // };
-
-
 
     // currency
     self.currency = 0;
@@ -59,6 +31,7 @@ function MainService($rootScope, $http, $location) {
     self.getNumber = () => {
         return self.currency;
     }
+
     //updates the value of our currency based on completed tasks
     self.updateCurrency = (task) => {
         if (task.completed === true) {
@@ -71,6 +44,7 @@ function MainService($rootScope, $http, $location) {
             console.log("error");
         }
     }
+
     // updates currency after buying items
     self.buyItems = (value) => {
         if (value >= 0) {

@@ -5,7 +5,7 @@ const syntax = {
         const vm = this;
         vm.mood = undefined;
 
-        // updates tasks from promise
+        // gets percentage for mood
         vm.setMood = (comp, all) => {
             vm.mood = (comp / all).toFixed(2) * 100;
             vm.barPercent = vm.mood + '%';
@@ -26,11 +26,16 @@ const syntax = {
 
             MainService.getCompletedTasks().then((result) => {
                 vm.compTasks = result.data.length;
-                return vm.compTasks, vm.setMood(vm.compTasks, vm.allTasks);
-            });;
+                return vm.compTasks
+            });
+            
+            setTimeout(function(){
+                vm.setMood(vm.compTasks, vm.allTasks);
+            }, 1000);
         };
 
         vm.getMoodData();
+
 
     }]
 }
