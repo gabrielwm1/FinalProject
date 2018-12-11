@@ -1,36 +1,29 @@
 "use strict";
 const home = {
     templateUrl: "app/components/home/home.html",
-    // bindings: {
-    //     allTasks: "<",
-    //     compTasks: "<"
-    //   },
+
     controller: ["MainService", function (MainService) {
         const vm = this;
 
-        vm.allTask = undefined;
-        vm.compTasks = undefined;
-
         //check whether or not we are in intro mode
         vm.showIntro = MainService.getIntroValue();
+        
         //enter application and hide intro
         vm.hideIntro = () => {
             vm.showIntro = false;
             MainService.setIntroValue();
         }
 
-        // Erica is working on this for the module
-        // vm.mood = MainService.sendMood();
-        // console.log(vm.mood);
-        // vm.sadDog = false;
-        // updates tasks from promise
+        // gets percentage for mood
         vm.setMood = (comp, all) => {
-            vm.mood = comp / all;
-            // if (vm.mood < 0.5) {
-            //     vm.sadDog = true; 
-            // } 
-            // console.log(vm.sadDog);          
-            return vm.mood;
+            vm.mood = (comp / all).toFixed(2) * 100;
+            vm.barPercent = vm.mood + '%';
+            console.log(`
+                        All Tasks: ${all}
+                        Completed Tasks: ${comp}  
+                        Mood: ${vm.mood}
+                    `);
+            return vm.mood, vm.barPercent;
         }
 
         // gets all tasks and uncompleted tasks on load
@@ -42,8 +35,12 @@ const home = {
 
             MainService.getCompletedTasks().then((result) => {
                 vm.compTasks = result.data.length;
-                return vm.compTasks, vm.setMood(vm.compTasks, vm.allTasks);
-            });;
+                return vm.compTasks
+            });
+            
+            setTimeout(function(){
+                vm.setMood(vm.compTasks, vm.allTasks);
+            }, 1000);
         };
 
         vm.getMoodData();
