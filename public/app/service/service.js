@@ -125,52 +125,36 @@ function MainService($rootScope, $http, $location) {
             item: "Teddy Bear",
             price: 3,
             bought: false,
-            image: "./app/images/teddybear.png"
+            image: "./app/images/teddybear.svg"
         },
         {
             id: 1,
             item: "Treat",
             price: 2,
             bought: false,
-            image: "./app/images/treat.png"
+            image: "./app/images/treat.svg"
         },
         {
             id: 2,
             item: "Ball",
             price: 8,
             bought: false,
-            image: "./app/images/ball.png"
+            image: "./app/images/ball.svg"
         },
         {
             id: 3,
             item: "Bowl",
             price: 4,
             bought: false,
-            image: "./app/images/dogbowl.png"
+            image: "./app/images/dogbowl.svg"
         },
         {
             id: 4,
-            item: "Toy",
-            price: 7,
-            bought: false,
-            image: "./app/images/toy.png"
-        },
-        {
-            id: 5,
             item: "Fire Hydrant",
             price: 15,
             bought: false,
-            image: "./app/images/fire-hydrant.png"  
-        },
-        {
-            id: 6,
-            item: "Glasses",
-            price: 6,
-            bought: false,
-            image: "./app/images/sunglasses.png"  
+            image: "./app/images/fire-hydrant.svg"  
         }
-
-
     ];
 
     self.getCart = () => {
