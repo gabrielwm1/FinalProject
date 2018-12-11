@@ -10,19 +10,16 @@ body {
     left: 10px;
 }
 /* intro modal styling */
-intro{
+intro {
     border-radius: 15px;
     padding: 20px;
     width: 60vw;
-    /* height: 60vh; */
     max-width: 425px;
     background-color: #EFF3F4;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     position: fixed;
-    /* z-index: 9; */
-    /* border: 4px solid black; */ 
  }
 .intro-container{
     padding: 20px;
@@ -175,7 +172,6 @@ intro{
     background-color: rgba(247, 251, 252, 0.452);
     box-shadow: 1px 1px 2px 1px rgba(87, 133, 151, 0.1);
     border-left: 10px solid transparent;
-    transition: 1s ease-out;
 }
 
 .high-importance {
@@ -421,7 +417,7 @@ intro{
 }
 
 .form-modal {
-    z-index: 900;
+    z-index: 99999;
     position: absolute;
     left: 0;
     top: 0

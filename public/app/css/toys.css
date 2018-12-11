@@ -1,3 +1,9 @@
+.toy{
+    width: 100px;
+    height: 100px;
+    animation: drop 1s ease-in, jump .5s 1s ease-in-out;
+}
+
 /* teddy bear */
 .toy1 {
     position: fixed;
@@ -16,37 +22,10 @@
     width: 50px;
     z-index: 5;
 }
-/* big ball */
-.toy3 {
-    position: fixed;
-    left: 20%;
-    bottom: 25%;
-    height: 50px;
-    width: 50px;
-    z-index: 5;
-}
 
-/* dish */
-.toy4 {
-    position: fixed;
-    left: 60%;
-    bottom: 23%;
-    height: 50px;
-    width: 50px;
-    z-index: 5;
-}
 
-/* chew toy */
-.toy5 {
-    position: fixed;
-    left: 49%;
-    bottom: 28%;
-    height: 50px;
-    width: 50px;
-    z-index: 5;
-}
 /* fire hydrant */
-.toy6 {
+.toy5 {
     position: fixed;
     left: 65%;
     bottom: 40%;
@@ -55,17 +34,15 @@
     z-index: 5;
 }
 
-
-
-
-
-
-
-
-.toy{
-    width: 100px;
-    height: 100px;
-    animation: drop 1s ease-in, jump .5s 1s ease-in-out;
+/* ball */
+.toy3 img.toy {
+    position: fixed;
+    left: 60%;
+    bottom: 23%;
+    height: 50px;
+    width: 50px;
+    z-index: 5;
+    animation: drop 1s ease-in, jump .5s 1s ease-in-out, bounce 0.6s 1s infinite ease-in alternate-reverse;
 }
 
 @keyframes drop{
