@@ -11,5 +11,5 @@ app.use("/", routes);
 const port = process.env.PORT || 5000;
 
 app.listen(port, _ => {
-    console.log(`server is running on Port: ${port}`);
+    console.log(`server is running on Port: ${port}.`);
 });
