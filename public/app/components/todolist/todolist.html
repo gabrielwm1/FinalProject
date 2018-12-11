@@ -54,9 +54,9 @@
 
 
     <div class="toggle-container">
-        <label class="switch">
-            <input type="checkbox" />
-            <div ng-click="$ctrl.toggleCompleted();"></div>
+        <label for="toggle-check" class="switch"> 
+            <input id="toggle-check" type="checkbox" ng-click="$ctrl.toggleCompleted();"/>
+            <div></div>
         </label>
         <section class="text-toggle" ng-class="{'hide': $ctrl.toggle === true}">Show Completed</section>
         <section class="text-toggle" ng-class="{'hide': $ctrl.toggle === false}">Hide Completed</section>

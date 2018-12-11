@@ -14,5 +14,6 @@ const config = {
     port: params.port,
     database: params.pathname.split("/")[1],
     ssl: params.hostname !== "localhost"
+
 };
 module.exports = new pg.Pool(config);
