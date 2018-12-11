@@ -3,8 +3,7 @@ function MainService($rootScope, $http, $location) {
     const self = this;
 
     //handles form showing and hidding
-    self.showForm = true;
-    
+    self.showForm;
     //returns value so that we hide the intro modal
     self.setIntroValue = () =>{
         self.introValue = false;
