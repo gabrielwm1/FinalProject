@@ -81,11 +81,10 @@ const todolist = {
 
         // toggles todo list to show or hide completed
         vm.toggleCompleted = () => {
-  
-            if (vm.toggle === true) {
-                 vm.toggle = false;
+            if (vm.toggle) {
+                 vm.toggle = !vm.toggle;
             } else {
-                 vm.toggle = true;
+                vm.toggle = !vm.toggle;
             }
         };
     }]
