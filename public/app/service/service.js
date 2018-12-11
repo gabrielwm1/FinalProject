@@ -123,35 +123,35 @@ function MainService($rootScope, $http, $location) {
         {
             id: 0,
             item: "Teddy Bear",
-            price: 3,
+            price: 1,
             bought: false,
             image: "./app/images/teddybear.svg"
         },
         {
             id: 1,
             item: "Treat",
-            price: 2,
+            price: 1,
             bought: false,
             image: "./app/images/treat.svg"
         },
         {
             id: 2,
             item: "Ball",
-            price: 8,
+            price: 1,
             bought: false,
             image: "./app/images/ball.svg"
         },
         {
             id: 3,
             item: "Bowl",
-            price: 4,
+            price: 1,
             bought: false,
             image: "./app/images/dogbowl.svg"
         },
         {
             id: 4,
             item: "Fire Hydrant",
-            price: 15,
+            price: 1,
             bought: false,
             image: "./app/images/fire-hydrant.svg"  
         }

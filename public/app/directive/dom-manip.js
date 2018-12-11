@@ -41,7 +41,7 @@ function displayDir() {
 
                     setTimeout(function () {
                         $element[0].parentElement.parentElement.ownerDocument.body.firstElementChild.children[0].children[3].children[0].children[1].classList.toggle("hide");
-                    }, 5000);
+                    }, 6500);
                 }
             });
 
