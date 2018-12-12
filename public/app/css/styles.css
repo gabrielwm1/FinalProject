@@ -741,11 +741,10 @@ input {
         background-color: #E0BC63;
     }
     .inventory-container {
-        width: 80vw;
-        max-height: calc(100vh - 170px);
-        top: 50px;
+        width: 100px;
+        max-height: calc(70vh - 100px);
+        bottom: 110px;
         right: 10px;
-        background-color: #EFF3F4;
         overflow: scroll;
     }
     .inventory-item {
