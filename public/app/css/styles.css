@@ -599,7 +599,8 @@ input {
 }
 
 .price-container {
-    width: 30%;
+    bottom: 3px;
+    width: 35%;
     height: 15%;
     margin: 0 auto;
     padding: 2px;
@@ -607,7 +608,7 @@ input {
     align-items: center;
     justify-content: center;
     border-radius: 5%;
-    box-shadow: 1px 1px 2px 1px rgba(87, 133,151, 0.4);
+    box-shadow: 0px 2px 3px 0px rgba(87, 133,151, 0.4);
 }
 
 .item-price, .price-coin{
@@ -620,8 +621,15 @@ input {
     margin-top: 2px;
 }
 
+.item-price {
+    margin-left: 2px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 18px;
+    color: #C1603A;
+}
+
 .price-coin{
-    border-right: 1px solid black;
+    border-right: 1px solid rgba(151, 151, 151, 0.507);
 }
 
 .inventory-item {
@@ -631,14 +639,19 @@ input {
 }
 
 .inventory-img {
-    max-width: 70%;
-    max-height: 70%;
+    max-width: 68%;
+    max-height: 68%;
     margin: 5px auto;
 }
 
+.bowl img.inventory-img{
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+
 .inventory-img:hover {
-    max-width: 75%;
-    max-height: 75%;
+    max-width: 72%;
+    max-height: 72%;
     transition: 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
     cursor: pointer;
 }
