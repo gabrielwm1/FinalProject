@@ -6,8 +6,8 @@ const intro = {
     <img class="intro-logo" src="app/images/planimal.svg">
     <p class="intro-label">Hi Hooman!!! I am here to help you get your tasks completed. The more you complete, the happier I am!  mofffmoff moff mof mof</p>
     <h2 class="name-pet">Name your pet: </h2>
-    <input class="intro-input" type="text" placeholder="Your pet's name">
-    <button class="intro-button" ng-click=$ctrl.hideIntro()>Lets Play!</button>
+    <input class="intro-input" type="text" placeholder="Your pet's name" ng-model= "$ctrl.pet.name">
+    <button class="intro-button" ng-click="$ctrl.closeAndRefresh(); $ctrl.hideIntro(); $ctrl.setName($ctrl.pet)">Lets Play!</button>
     </div>
     </form>
    
@@ -17,17 +17,22 @@ const intro = {
         hideIntro: "&",
     },
 
-    controller: ["MainService", function(MainService){
+    controller: ["MainService", "$route", function( MainService, $route){
         const vm = this; 
         vm.showIntro = true;
-        vm.name; 
+        vm.pet = {
+            name: "",
+        }
+        vm.closeAndRefresh = () => {
+            $route.reload();
+        }
         vm.hideIntro = () => {
             MainService.setIntroValue(false);
             console.log("test");
         }
-        vm.setName = (name) => {
-            MainService.setName(name);
-            console.log(name);
+        vm.setName = (pet) => {
+            MainService.setName(pet.name);
+            console.log(pet.name);
         }
     }]
 

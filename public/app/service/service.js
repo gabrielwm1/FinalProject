@@ -4,6 +4,16 @@ function MainService($rootScope, $http, $location) {
 
     //handles form showing and hidding
     self.showForm;
+    self.name;
+    //sets the name of our pet
+    self.setName = (value) =>{
+        self.name = value; 
+        console.log(value);
+    }
+    //returns the name of our pet to the pet component
+    self.getName = () =>{
+        return self.name;
+    }
     //returns value so that we hide the intro modal
     self.setIntroValue = () =>{
         self.introValue = false;
