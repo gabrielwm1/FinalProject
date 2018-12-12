@@ -8,7 +8,6 @@ const pool = require("../connection/connection.js");
 function getTasks(req,res){
     pool.query("SELECT * FROM todo order by importance").then((result) => {
         res.json(result.rows);
-        console.log("success");
     });
 }
 
@@ -16,14 +15,12 @@ function getTasks(req,res){
 routes.get("/tasks", (req, res) => {
     pool.query("SELECT * FROM todo").then((result) => {
         res.json(result.rows);
-        console.log("success");
     })
 });
 //get all completed tasks
 routes.get("/tasks/completed", (req, res) => {
     pool.query("SELECT * FROM todo WHERE completed = true").then((result) => {
         res.json(result.rows);
-        console.log("success");
     })
 })
 
@@ -32,7 +29,6 @@ routes.get("/tasks/completed", (req, res) => {
 routes.get("/tasks/daily", (req, res) => {
     pool.query("SELECT * FROM todo WHERE daily = true ORDER BY importance DESC, id").then((result) => {
         res.json(result.rows);
-        console.log("success");
     })
 });
 
@@ -40,7 +36,6 @@ routes.get("/tasks/daily", (req, res) => {
 routes.get("/tasks/weekly", (req, res) => {
     pool.query("SELECT * FROM todo WHERE weekly = true ORDER BY importance DESC, id").then((result) => {
         res.json(result.rows);
-        console.log("success");
     })
 });
 
@@ -48,7 +43,6 @@ routes.get("/tasks/weekly", (req, res) => {
 routes.get("/tasks/todo", (req, res) => {
     pool.query("SELECT * FROM todo WHERE todo = true ORDER BY importance DESC, id").then((result) => {
         res.json(result.rows);
-        console.log("success");
     })
 });
 

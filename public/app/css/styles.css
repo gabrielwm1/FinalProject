@@ -570,9 +570,16 @@ input {
 }
 
 .inventory-img {
-    max-width: auto;
-    max-height: 80%;
-    margin: 0 auto;
+    max-width: 70%;
+    max-height: 70%;
+    margin: 5px auto;
+}
+
+.inventory-img:hover {
+    max-width: 75%;
+    max-height: 75%;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    cursor: pointer;
 }
 
 .items {

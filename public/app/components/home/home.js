@@ -27,6 +27,8 @@ const home = {
         };
         // calls data on load
         MainService.getTasks().then((result) => {
+            console.log(result);
+            
             vm.allTasks = result.data.length;
             MainService.getCompletedTasks().then((result) => {
                 vm.compTasks = result.data.length;
