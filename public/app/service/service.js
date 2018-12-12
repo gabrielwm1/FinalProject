@@ -130,13 +130,6 @@ function MainService($rootScope, $http, $location) {
 
     self.inventory = [
         {
-            id: 2,
-            item: "ball",
-            price: 1,
-            bought: false,
-            image: "./app/images/ball.svg"
-        },
-        {
             id: 0,
             item: "teddy-bear",
             price: 1,
@@ -144,23 +137,30 @@ function MainService($rootScope, $http, $location) {
             image: "./app/images/teddybear.svg"
         },
         {
-            id: 3,
-            item: "bowl",
-            price: 3,
-            bought: false,
-            image: "./app/images/dogbowl.svg"
-        },
-        {
             id: 1,
             item: "treat",
-            price: 4,
+            price: 1,
             bought: false,
             image: "./app/images/treat.svg"
         },
         {
+            id: 2,
+            item: "ball",
+            price: 1,
+            bought: false,
+            image: "./app/images/ball.svg"
+        },
+        {
+            id: 3,
+            item: "bowl",
+            price: 1,
+            bought: false,
+            image: "./app/images/dogbowl.svg"
+        },
+        {
             id: 4,
             item: "fire-hydrant",
-            price: 5,
+            price: 1,
             bought: false,
             image: "./app/images/fire-hydrant.svg"  
         }
