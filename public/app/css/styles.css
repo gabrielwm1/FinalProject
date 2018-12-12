@@ -635,10 +635,6 @@ input {
 
 @media only screen and (max-width: 1024px) {
     /* home */
-    .nav-bar {
-        top: 10px;
-        transform: translateY(0%);
-    }
     .dog {
         margin-top: 60px;
     }
@@ -669,20 +665,28 @@ input {
 /* iphone plus */
 
 @media only screen and (max-width: 426px) {
+
+    intro {
+        width: 100%;
+    }
+
     .dog {
         margin-top: 0;
     }
 
     .coin-container{
-        transform: translateY(550%);
-    }
+        transform: translate(0);
+        bottom: 10px;
+        top: auto;
+        }
 
     .nav-bar {
         width: 202px;
         height: 100px;
         flex-direction: row;
-        top: 10px;
-        transform: translateY(550%);
+        transform: translate(0);
+        bottom: 10px;
+        top: auto;
     }
     .nav-form, .nav-todo, .coin-container {
         height: 100px;
@@ -708,15 +712,21 @@ input {
         background-color: #E0BC63;
     }
     .inventory-container {
-        width: 100px;
-        max-height: calc(100vh - 130px);
-        top: 120px;
+        width: 80vw;
+        max-height: calc(100vh - 170px);
+        top: 50px;
         right: 10px;
         background-color: #EFF3F4;
+        overflow: scroll;
+    }
+
+    .inventory-item {
+        width: 100%;
+        height: auto;
     }
     .items {
-        width: 100px;
-        height: 100px;
+        width: 100%;
+        height: auto;
     }
     /* form styling */
     .low, .medium, .high {
