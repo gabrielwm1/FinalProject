@@ -5,13 +5,13 @@
         <img class="coin" src="app/images/coin.svg" alt="coin image">
     </section>
     <section class="inventory-container dir-hide">
-        <section display-dir class="inventory-item" ng-repeat="item in $ctrl.inventory" ng-class="{'not-enough': $ctrl.currency < item.price}">
+        <section display-dir class="inventory-item {{item.item}}" ng-repeat="item in $ctrl.inventory" ng-class="{'not-enough': $ctrl.currency < item.price}">
             <section class="items" ng-click="$ctrl.buyItems(item.id, item)">
+                <img class="inventory-img" ng-src="{{item.image}}">
                 <section class="price-container">
                     <img class="price-coin" src="app/images/coin.svg" alt="coin image">
-                    <p>x{{item.price}}</p>
+                    <p class="item-price">{{item.price}}</p>
                 </section>
-                <img class="inventory-img" ng-src="{{item.image}}">
             </section>
         </section>
     </section>

@@ -4,7 +4,8 @@ body {
 }
 
 .logo {
-    max-width: 100px;
+    max-width: 250px;
+    max-height: 250px;
     position: fixed;
     top: 10px;
     left: 10px;
@@ -445,9 +446,10 @@ h2.name-pet {
 
 .form-modal {
     z-index: 99999;
-    position: absolute;
-    left: 0;
-    top: 0
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 section.form-overlay {
@@ -597,17 +599,37 @@ input {
 }
 
 .price-container {
-    width: 90%;
+    bottom: 3px;
+    width: 35%;
     height: 15%;
-    margin: 2px;
+    margin: 0 auto;
     padding: 2px;
     display: flex;
     align-items: center;
+    justify-content: center;
+    border-radius: 5%;
+    box-shadow: 0px 2px 3px 0px rgba(87, 133,151, 0.4);
 }
 
-.price-coin {
+.item-price, .price-coin{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 18px;
     width: 18px;
+    padding: 2px;
+    margin-top: 2px;
+}
+
+.item-price {
+    margin-left: 2px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 18px;
+    color: #C1603A;
+}
+
+.price-coin{
+    border-right: 1px solid rgba(151, 151, 151, 0.507);
 }
 
 .inventory-item {
@@ -617,14 +639,19 @@ input {
 }
 
 .inventory-img {
-    max-width: 70%;
-    max-height: 70%;
+    max-width: 68%;
+    max-height: 68%;
     margin: 5px auto;
 }
 
+.bowl img.inventory-img{
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+
 .inventory-img:hover {
-    max-width: 75%;
-    max-height: 75%;
+    max-width: 72%;
+    max-height: 72%;
     transition: 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
     cursor: pointer;
 }
@@ -673,6 +700,7 @@ input {
     .dog {
         margin-top: 20px;
     }
+
 }
 
 /* iphone plus */
@@ -680,6 +708,11 @@ input {
 @media only screen and (max-width: 426px) {
     intro {
         width: 100%;
+    }
+
+    .logo{
+        left: 50%;
+        transform: translateX(-50%);
     }
     .dog {
         margin-top: 0;
