@@ -4,7 +4,8 @@ body {
 }
 
 .logo {
-    max-width: 100px;
+    max-width: 250px;
+    max-height: 250px;
     position: fixed;
     top: 10px;
     left: 10px;
@@ -445,9 +446,10 @@ h2.name-pet {
 
 .form-modal {
     z-index: 99999;
-    position: absolute;
-    left: 0;
-    top: 0
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 section.form-overlay {
@@ -673,6 +675,11 @@ input {
     .dog {
         margin-top: 20px;
     }
+
+    .nav-bar{
+        transform: translateY(40%);
+        
+    }
 }
 
 /* iphone plus */
@@ -680,6 +687,11 @@ input {
 @media only screen and (max-width: 426px) {
     intro {
         width: 100%;
+    }
+
+    .logo{
+        left: 50%;
+        transform: translateX(-50%);
     }
     .dog {
         margin-top: 0;
