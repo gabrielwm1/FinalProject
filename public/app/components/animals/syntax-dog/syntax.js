@@ -6,7 +6,7 @@ const syntax = {
 
         // updates tasks from promise
         vm.setMood = (comp, all) => {
-            vm.mood = (comp / all).toFixed(2) * 100;
+            vm.mood = ((comp / all) * 100).toFixed(0);
             vm.barPercent = vm.mood + '%';
             console.log(`
                         All Tasks: ${all}
