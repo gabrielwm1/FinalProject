@@ -11,6 +11,7 @@ body {
 }
 
 /* intro modal styling */
+
 intro {
     border-radius: 15px;
     padding: 20px;
@@ -21,43 +22,43 @@ intro {
     left: 50%;
     transform: translate(-50%, -50%);
     position: fixed;
- }
+}
 
-.intro-container{
+.intro-container {
     padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
- .intro-label{
+.intro-label {
     color: #062733;
     font-size: 18px;
     margin: 25px 10px 15px 10px;
     line-height: 26px;
- }
+}
 
- .intro-logo{
-     width: 50%;
-     margin: 0 auto;
- }
+.intro-logo {
+    width: 50%;
+    margin: 0 auto;
+}
 
- .intro-input{
-     font-size: 18px;
-     margin-bottom: 20px;
- }
+.intro-input {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
 
- h2.name-pet{
+h2.name-pet {
     font-size: 20px;
     margin-bottom: 10px;
- }
+}
 
-.intro-button{
+.intro-button {
     padding: 18px;
     border: none;
     border-radius: 15px;
     background-color: #68BA56;
-    color:white;
+    color: white;
     font-size: 18px;
     margin: 12px 0px;
     box-shadow: 2px 2px 5px 1px rgb(134, 143, 146);
@@ -70,6 +71,7 @@ intro {
 }
 
 /* navigation styling */
+
 .nav-bar {
     height: 302px;
     width: 150px;
@@ -137,14 +139,16 @@ intro {
     z-index: 10;
     transition: color 0.5s ease;
 }
+
 .todo-add:hover {
     cursor: pointer;
-    color:rgba(224, 167, 7, 0.8);
+    color: rgba(224, 167, 7, 0.8);
 }
 
 .todo-header {
     position: fixed;
-    top: 0; left: 0;
+    top: 0;
+    left: 0;
     height: 75px;
     width: 100vw;
     background-color: #c7e5f2;
@@ -203,7 +207,7 @@ intro {
     color: transparent;
 }
 
-.daily-container:hover .delete-task-icon, .weekly-container:hover .delete-task-icon, .todo-container:hover .delete-task-icon{
+.daily-container:hover .delete-task-icon, .weekly-container:hover .delete-task-icon, .todo-container:hover .delete-task-icon {
     cursor: pointer;
     color: #062733;
 }
@@ -218,7 +222,7 @@ intro {
     transition: color 0.5s ease;
 }
 
-.fa-arrow-left:hover{
+.fa-arrow-left:hover {
     color: rgba(224, 167, 7, 0.8);
 }
 
@@ -275,7 +279,7 @@ intro {
     box-shadow: 0 0.1em 0.3em rgba(0, 0, 0, 0.3);
 }
 
-.coin-number{
+.coin-number {
     font-family: 'Roboto Slab', serif;
     color: #C1603A;
     font-size: 140px;
@@ -294,35 +298,35 @@ intro {
     top: 15%;
     border: none;
     z-index: 800;
-    animation: expand .5s ease-in-out forwards, spin 1s 1s ease-in-out, leave 1s 2.5s cubic-bezier(1,.02,.4,.93) forwards;
+    animation: expand .5s ease-in-out forwards, spin 1s 1s ease-in-out, leave 1s 2.5s cubic-bezier(1, .02, .4, .93) forwards;
 }
 
-.coin2{
+.coin2 {
     margin: 0px;
     height: 100%;
     width: 100%;
 }
 
-@keyframes expand{
-    0%{
+@keyframes expand {
+    0% {
         transform: translateY(150%);
     }
-      100% {
-        transform:translateY(-0%);
-      }
+    100% {
+        transform: translateY(-0%);
+    }
 }
 
-@keyframes spin{
-    100%{
+@keyframes spin {
+    100% {
         transform: rotateY(1080deg);
     }
-    
 }
-@keyframes leave{
-    0%{
+
+@keyframes leave {
+    0% {
         transform: translateX(0%);
     }
-    100%{
+    100% {
         transform: translateX(-200%);
     }
 }
@@ -392,9 +396,19 @@ intro {
     height: 150px;
     width: 150px;
     border-radius: 15px;
-    box-shadow: 2px 2px 5px 1px rgb(87, 133, 151);
+    animation: neon 3s ease infinite;
+    -moz-animation: neon 3s ease infinite;
+    -webkit-animation: neon 3s ease infinite;
 }
 
+@keyframes neon {
+    0%, 100% {
+        box-shadow: 2px 2px 5px 1px rgb(87, 133, 151);
+    }
+    50% {
+        box-shadow: 2px 2px 5vw 1px rgb(54, 103, 122)
+    }
+}
 
 .coin {
     margin: 20px;
@@ -424,6 +438,7 @@ intro {
 }
 
 /* form styling */
+
 .form-input {
     font-size: 24px;
 }
@@ -581,7 +596,7 @@ input {
     right: 10px;
 }
 
-.price-container{
+.price-container {
     width: 90%;
     height: 15%;
     margin: 2px;
@@ -590,7 +605,7 @@ input {
     align-items: center;
 }
 
-.price-coin{
+.price-coin {
     height: 18px;
     width: 18px;
 }
@@ -620,8 +635,6 @@ input {
     width: 150px;
     text-align: center;
 }
-
-
 
 /* ONLY FOR HIDING KEEP AT BOTTOM */
 
@@ -665,21 +678,17 @@ input {
 /* iphone plus */
 
 @media only screen and (max-width: 426px) {
-
     intro {
         width: 100%;
     }
-
     .dog {
         margin-top: 0;
     }
-
-    .coin-container{
+    .coin-container {
         transform: translate(0);
         bottom: 10px;
         top: auto;
-        }
-
+    }
     .nav-bar {
         width: 202px;
         height: 100px;
@@ -719,7 +728,6 @@ input {
         background-color: #EFF3F4;
         overflow: scroll;
     }
-
     .inventory-item {
         width: 100%;
         height: auto;
@@ -735,22 +743,18 @@ input {
     .task-type-contain {
         flex-direction: column;
     }
-
-    submit{
+    submit {
         width: 85vw;
         height: 85vh;
         overflow: scroll;
     }
-
-    .form-label{
+    .form-label {
         font-size: 20px;
     }
-
-    .daily-btn,.weekly-btn,.todo-btn,.edit-btn{
-        font-size:25px;
+    .daily-btn, .weekly-btn, .todo-btn, .edit-btn {
+        font-size: 25px;
     }
-
-    .coin-number{
+    .coin-number {
         font-size: 80px;
     }
 }
@@ -764,18 +768,14 @@ input {
     .nav-bar {
         left: 5px;
     }
-
-    .box{
+    .box {
         width: 85vw;
     }
-
-    .daily-container, .weekly-container, .todo-container{
+    .daily-container, .weekly-container, .todo-container {
         width: 90%;
         align-self: center;
     }
-
-    .coin-number{
+    .coin-number {
         font-size: 60px;
     }
-
 }
