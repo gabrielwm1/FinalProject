@@ -4,6 +4,7 @@ const syntax = {
     controller: ["MainService", function (MainService) {
         const vm = this;
 
+        vm.name = MainService.getName();
         // updates tasks from promise
         vm.setMood = (comp, all) => {
             vm.mood = ((comp / all) * 100).toFixed(0);
