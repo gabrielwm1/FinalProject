@@ -4,7 +4,8 @@ body {
 }
 
 .logo {
-    max-width: 100px;
+    max-width: 250px;
+    max-height: 250px;
     position: fixed;
     top: 10px;
     left: 10px;
@@ -445,9 +446,10 @@ h2.name-pet {
 
 .form-modal {
     z-index: 99999;
-    position: absolute;
-    left: 0;
-    top: 0
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 section.form-overlay {
@@ -597,17 +599,29 @@ input {
 }
 
 .price-container {
-    width: 90%;
+    width: 30%;
     height: 15%;
-    margin: 2px;
+    margin: 0 auto;
     padding: 2px;
     display: flex;
     align-items: center;
+    justify-content: center;
+    border-radius: 5%;
+    box-shadow: 1px 1px 2px 1px rgba(87, 133,151, 0.4);
 }
 
-.price-coin {
+.item-price, .price-coin{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 18px;
     width: 18px;
+    padding: 2px;
+    margin-top: 2px;
+}
+
+.price-coin{
+    border-right: 1px solid black;
 }
 
 .inventory-item {
@@ -673,6 +687,7 @@ input {
     .dog {
         margin-top: 20px;
     }
+
 }
 
 /* iphone plus */
@@ -680,6 +695,11 @@ input {
 @media only screen and (max-width: 426px) {
     intro {
         width: 100%;
+    }
+
+    .logo{
+        left: 50%;
+        transform: translateX(-50%);
     }
     .dog {
         margin-top: 0;
