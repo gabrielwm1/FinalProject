@@ -9,6 +9,7 @@ body {
     top: 10px;
     left: 10px;
 }
+
 /* intro modal styling */
 intro {
     border-radius: 15px;
@@ -21,31 +22,36 @@ intro {
     transform: translate(-50%, -50%);
     position: fixed;
  }
+
 .intro-container{
     padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
+
  .intro-label{
     color: #062733;
     font-size: 18px;
     margin: 25px 10px 15px 10px;
     line-height: 26px;
  }
+
  .intro-logo{
      width: 50%;
-     /* position: absolute; */
      margin: 0 auto;
  }
+
  .intro-input{
      font-size: 18px;
      margin-bottom: 20px;
  }
+
  h2.name-pet{
     font-size: 20px;
     margin-bottom: 10px;
  }
+
 .intro-button{
     padding: 18px;
     border: none;
@@ -55,8 +61,14 @@ intro {
     font-size: 18px;
     margin: 12px 0px;
     box-shadow: 2px 2px 5px 1px rgb(134, 143, 146);
-
+    transition: 0.3s ease-in-out;
 }
+
+.intro-button:hover {
+    background-color: rgb(136, 206, 121);
+    cursor: pointer;
+}
+
 /* navigation styling */
 .nav-bar {
     height: 302px;
@@ -490,7 +502,7 @@ input {
     flex-grow: 1;
     border-radius: 10px;
     color: white;
-    transition: .3s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 
 .low, .medium, .high {
@@ -503,12 +515,27 @@ input {
     background-color: #68BA56;
 }
 
+.low:hover {
+    background-color: rgb(136, 206, 121);
+    cursor: pointer;
+}
+
 .medium {
     background-color: #e0a707;
 }
 
+.medium:hover {
+    background-color: #ecc24c;
+    cursor: pointer;
+}
+
 .high {
     background-color: #BF4D2E;
+}
+
+.high:hover {
+    background-color: rgb(194, 114, 92);
+    cursor: pointer;
 }
 
 .daily-btn, .weekly-btn, .todo-btn {
@@ -516,6 +543,11 @@ input {
     font-size: 18px;
     padding: 15px;
     letter-spacing: 1px;
+}
+
+.daily-btn:hover, .weekly-btn:hover, .todo-btn:hover {
+    cursor: pointer;
+    background-color: rgb(194, 129, 184);
 }
 
 .edit-btn {

@@ -30,7 +30,7 @@ function displayDir() {
             // greys out selection on form on click
             $element.on("click", () => {
                 if ($element[0].tagName === "BUTTON") {
-                    $element[0].style.backgroundColor = "grey";
+                    $element[0].style.backgroundColor = "rgb(187, 187, 187)";
                 }
             });
 
