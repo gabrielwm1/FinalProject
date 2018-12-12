@@ -20,9 +20,14 @@ const intro = {
     controller: ["MainService", function(MainService){
         const vm = this; 
         vm.showIntro = true;
+        vm.name; 
         vm.hideIntro = () => {
             MainService.setIntroValue(false);
             console.log("test");
+        }
+        vm.setName = (name) => {
+            MainService.setName(name);
+            console.log(name);
         }
     }]
 
